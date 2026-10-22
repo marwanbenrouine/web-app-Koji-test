@@ -1,0 +1,14 @@
+import fs from 'node:fs';
+const dir='tools/ai-evals/revision/results',file=dir+'/state.json',s=JSON.parse(fs.readFileSync(file,'utf8'));
+if(fs.existsSync(dir+'/running.lock')||s.selectionClosed)throw new Error('Run active or selection closed');
+const [phase,hypothesis]=process.argv.slice(2),r=s.runs[phase];if(!r?.completed||!phase.startsWith('candidate')||s.decisions.some(d=>d.phase===phase))throw new Error('Undecidable candidate');
+const old=JSON.parse(fs.readFileSync('tools/ai-evals/optimization/results/state.json','utf8'));
+const references=s.bestPhase==='baseline'?[...s.runs.baseline.results.filter(r=>r.assistant==='radar'),...old.runs.baseline.results.filter(r=>r.assistant==='radar'&&r.passed)]:s.runs[s.bestPhase].results;
+if(references.length!==r.results.length||references.some(b=>!r.results.some(n=>n.id===b.id)))throw new Error('Unpaired comparison');
+const count=rows=>rows.filter(r=>r.passed).length,newOnly=rows=>rows.filter(r=>r.id.startsWith('REV-'));
+const regressions=references.filter(b=>b.passed&&!r.results.find(n=>n.id===b.id).passed).map(b=>({id:b.id,issues:r.results.find(n=>n.id===b.id).issues}));
+const critical=r.results.filter(n=>n.critical.length).map(n=>({id:n.id,issues:n.critical}));
+const accept=count(r.results)>count(references)&&count(newOnly(r.results))>count(newOnly(references))&&critical.length===0;
+const d={phase,hypothesis,previous:s.bestPhase,before:count(references),after:count(r.results),total:r.results.length,newBefore:count(newOnly(references)),newAfter:count(newOnly(r.results)),regressions,critical,accept,retainedGain:accept?(count(r.results)-count(references))/r.results.length:0};
+s.decisions.push(d);if(accept)s.bestPhase=phase;else fs.copyFileSync(dir+'/prompts/'+s.bestPhase+'/radar.js','lib/radar-chat-prompt.js');
+const fd=fs.openSync(file+'.tmp','w');fs.writeFileSync(fd,JSON.stringify(s,null,2)+'\n');fs.fsyncSync(fd);fs.closeSync(fd);fs.renameSync(file+'.tmp',file);console.log(JSON.stringify(d,null,2));

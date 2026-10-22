@@ -22,3 +22,6 @@ data/particulier-users.json
 # Optimization process lock (ledger/results are reviewable)
 /tools/ai-evals/optimization/results/running.lock
 /tools/ai-evals/optimization/results/*.tmp
+
+/tools/ai-evals/revision/results/running.lock
+/tools/ai-evals/revision/results/*.tmp

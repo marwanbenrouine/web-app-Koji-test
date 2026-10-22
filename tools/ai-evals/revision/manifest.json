@@ -1,0 +1,18 @@
+{
+  "base": "94c6dd4",
+  "frozenFiles": {
+    "tools/ai-evals/revision/benchmark.json": "264ce790cb466fad8d6bc1923f62815ba0c375b736e5a7acace85ab639eca5e3",
+    "tools/ai-evals/revision/evaluator.mjs": "0bcb89c436c5eabf66fc9b6b94c7540b8bed81fa3ac5d8bc0c7d4b32c6ba414e",
+    "tools/ai-evals/revision/budget.mjs": "2d1ec0c42f656f6eab44daca8c31f06a2d43d6e15bf756ca80fa595b5b52b740",
+    "tools/ai-evals/optimization/score.mjs": "fb0b80bf1da5803a6f81bafed864764d8c51e807fdb1d92881d882273ac4dcf8",
+    "tools/ai-evals/optimization/requests.mjs": "2f600cc0ec7f7ad07778cac69dfa9064f7420f54b53929f28791b96247c76405",
+    "lib/ai-json.js": "c3b7fc771e04b9d413e70a9e42f7d9bcbf8becae5504c748a5702873ba1053a1",
+    "tools/ai-evals/optimization/results/state.json": "b073a3ed509309a62236df80e1b006cec69fd9a83c759672c070b282ac2fee96"
+  },
+  "newDevelopment": 9,
+  "newValidation": 9,
+  "legacyRegression": 6,
+  "reservationFinalGenerations": 18,
+  "maxGenerations": 45,
+  "budgetUsd": 3.61
+}

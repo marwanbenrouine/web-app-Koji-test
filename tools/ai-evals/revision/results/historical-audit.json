@@ -1,0 +1,2682 @@
+[
+  {
+    "phase": "baseline",
+    "id": "LIVE-RADAR-01",
+    "assistant": "radar",
+    "originalPassed": false,
+    "consumerPassed": false,
+    "originalIssues": [
+      {
+        "dimension": "clarity",
+        "reason": "question_duplicated_with_choice"
+      }
+    ],
+    "consumerIssues": [
+      {
+        "dimension": "clarity",
+        "reason": "question_duplicated_with_choice"
+      }
+    ],
+    "presentation": {
+      "rawJson": null,
+      "warnings": []
+    },
+    "critical": [],
+    "actual": {
+      "input": 10268,
+      "output": 480,
+      "usd": 0.025336
+    },
+    "latencyMs": 4859,
+    "cause": "Prompt question/choice discipline"
+  },
+  {
+    "phase": "baseline",
+    "id": "LIVE-RADAR-02",
+    "assistant": "radar",
+    "originalPassed": false,
+    "consumerPassed": false,
+    "originalIssues": [
+      {
+        "dimension": "completeness",
+        "reason": "record_missing:intro"
+      },
+      {
+        "dimension": "clarity",
+        "reason": "question_duplicated_with_choice"
+      }
+    ],
+    "consumerIssues": [
+      {
+        "dimension": "completeness",
+        "reason": "record_missing:intro"
+      },
+      {
+        "dimension": "clarity",
+        "reason": "question_duplicated_with_choice"
+      }
+    ],
+    "presentation": {
+      "rawJson": null,
+      "warnings": []
+    },
+    "critical": [],
+    "actual": {
+      "input": 10276,
+      "output": 416,
+      "usd": 0.024712
+    },
+    "latencyMs": 4514,
+    "cause": "Recording completeness or overly specific field mapping; Prompt question/choice discipline"
+  },
+  {
+    "phase": "baseline",
+    "id": "R-D03",
+    "assistant": "radar",
+    "originalPassed": true,
+    "consumerPassed": true,
+    "originalIssues": [],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": null,
+      "warnings": []
+    },
+    "critical": [],
+    "actual": {
+      "input": 10217,
+      "output": 80,
+      "usd": 0.021234
+    },
+    "latencyMs": 1323,
+    "cause": "No detected failure"
+  },
+  {
+    "phase": "baseline",
+    "id": "R-D04",
+    "assistant": "radar",
+    "originalPassed": true,
+    "consumerPassed": true,
+    "originalIssues": [],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": null,
+      "warnings": []
+    },
+    "critical": [],
+    "actual": {
+      "input": 10284,
+      "output": 452,
+      "usd": 0.025088
+    },
+    "latencyMs": 4311,
+    "cause": "No detected failure"
+  },
+  {
+    "phase": "baseline",
+    "id": "R-D05",
+    "assistant": "radar",
+    "originalPassed": true,
+    "consumerPassed": true,
+    "originalIssues": [],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": null,
+      "warnings": []
+    },
+    "critical": [],
+    "actual": {
+      "input": 10276,
+      "output": 413,
+      "usd": 0.024682
+    },
+    "latencyMs": 3720,
+    "cause": "No detected failure"
+  },
+  {
+    "phase": "baseline",
+    "id": "R-D06",
+    "assistant": "radar",
+    "originalPassed": true,
+    "consumerPassed": true,
+    "originalIssues": [],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": null,
+      "warnings": []
+    },
+    "critical": [],
+    "actual": {
+      "input": 10270,
+      "output": 102,
+      "usd": 0.02156
+    },
+    "latencyMs": 1849,
+    "cause": "No detected failure"
+  },
+  {
+    "phase": "baseline",
+    "id": "R-D07",
+    "assistant": "radar",
+    "originalPassed": false,
+    "consumerPassed": false,
+    "originalIssues": [
+      {
+        "dimension": "clarity",
+        "reason": "question_duplicated_with_choice"
+      }
+    ],
+    "consumerIssues": [
+      {
+        "dimension": "clarity",
+        "reason": "question_duplicated_with_choice"
+      }
+    ],
+    "presentation": {
+      "rawJson": null,
+      "warnings": []
+    },
+    "critical": [],
+    "actual": {
+      "input": 10274,
+      "output": 365,
+      "usd": 0.024198
+    },
+    "latencyMs": 4018,
+    "cause": "Prompt question/choice discipline"
+  },
+  {
+    "phase": "baseline",
+    "id": "R-D08",
+    "assistant": "radar",
+    "originalPassed": true,
+    "consumerPassed": true,
+    "originalIssues": [],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": null,
+      "warnings": []
+    },
+    "critical": [],
+    "actual": {
+      "input": 10180,
+      "output": 240,
+      "usd": 0.02276
+    },
+    "latencyMs": 2906,
+    "cause": "No detected failure"
+  },
+  {
+    "phase": "baseline",
+    "id": "R-D09",
+    "assistant": "radar",
+    "originalPassed": true,
+    "consumerPassed": true,
+    "originalIssues": [],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": null,
+      "warnings": []
+    },
+    "critical": [],
+    "actual": {
+      "input": 10219,
+      "output": 405,
+      "usd": 0.024488
+    },
+    "latencyMs": 4781,
+    "cause": "No detected failure"
+  },
+  {
+    "phase": "baseline",
+    "id": "R-D10",
+    "assistant": "radar",
+    "originalPassed": false,
+    "consumerPassed": false,
+    "originalIssues": [
+      {
+        "dimension": "completeness",
+        "reason": "record_missing:adresse"
+      },
+      {
+        "dimension": "clarity",
+        "reason": "question_duplicated_with_choice"
+      }
+    ],
+    "consumerIssues": [
+      {
+        "dimension": "completeness",
+        "reason": "record_missing:adresse"
+      },
+      {
+        "dimension": "clarity",
+        "reason": "question_duplicated_with_choice"
+      }
+    ],
+    "presentation": {
+      "rawJson": null,
+      "warnings": []
+    },
+    "critical": [],
+    "actual": {
+      "input": 10279,
+      "output": 414,
+      "usd": 0.024698
+    },
+    "latencyMs": 3980,
+    "cause": "Recording completeness or overly specific field mapping; Prompt question/choice discipline"
+  },
+  {
+    "phase": "baseline",
+    "id": "LIVE-DEVIS-01",
+    "assistant": "devis",
+    "originalPassed": true,
+    "consumerPassed": true,
+    "originalIssues": [],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": null,
+      "warnings": []
+    },
+    "critical": [],
+    "actual": {
+      "input": 3858,
+      "output": 57,
+      "usd": 0.008286
+    },
+    "latencyMs": 1211,
+    "cause": "No detected failure"
+  },
+  {
+    "phase": "baseline",
+    "id": "LIVE-DEVIS-02",
+    "assistant": "devis",
+    "originalPassed": true,
+    "consumerPassed": true,
+    "originalIssues": [],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": null,
+      "warnings": []
+    },
+    "critical": [],
+    "actual": {
+      "input": 3924,
+      "output": 81,
+      "usd": 0.008658
+    },
+    "latencyMs": 1137,
+    "cause": "No detected failure"
+  },
+  {
+    "phase": "baseline",
+    "id": "D-D03",
+    "assistant": "devis",
+    "originalPassed": true,
+    "consumerPassed": true,
+    "originalIssues": [],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": null,
+      "warnings": []
+    },
+    "critical": [],
+    "actual": {
+      "input": 3903,
+      "output": 59,
+      "usd": 0.008396
+    },
+    "latencyMs": 1077,
+    "cause": "No detected failure"
+  },
+  {
+    "phase": "baseline",
+    "id": "D-D04",
+    "assistant": "devis",
+    "originalPassed": true,
+    "consumerPassed": true,
+    "originalIssues": [],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": null,
+      "warnings": []
+    },
+    "critical": [],
+    "actual": {
+      "input": 3924,
+      "output": 89,
+      "usd": 0.008738
+    },
+    "latencyMs": 1215,
+    "cause": "No detected failure"
+  },
+  {
+    "phase": "baseline",
+    "id": "D-D05",
+    "assistant": "devis",
+    "originalPassed": true,
+    "consumerPassed": true,
+    "originalIssues": [],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": null,
+      "warnings": []
+    },
+    "critical": [],
+    "actual": {
+      "input": 3940,
+      "output": 107,
+      "usd": 0.00895
+    },
+    "latencyMs": 1479,
+    "cause": "No detected failure"
+  },
+  {
+    "phase": "baseline",
+    "id": "D-D06",
+    "assistant": "devis",
+    "originalPassed": true,
+    "consumerPassed": true,
+    "originalIssues": [],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": null,
+      "warnings": []
+    },
+    "critical": [],
+    "actual": {
+      "input": 3971,
+      "output": 256,
+      "usd": 0.010502
+    },
+    "latencyMs": 3292,
+    "cause": "No detected failure"
+  },
+  {
+    "phase": "baseline",
+    "id": "D-D07",
+    "assistant": "devis",
+    "originalPassed": true,
+    "consumerPassed": true,
+    "originalIssues": [],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": null,
+      "warnings": []
+    },
+    "critical": [],
+    "actual": {
+      "input": 3916,
+      "output": 26,
+      "usd": 0.008092
+    },
+    "latencyMs": 942,
+    "cause": "No detected failure"
+  },
+  {
+    "phase": "baseline",
+    "id": "D-D08",
+    "assistant": "devis",
+    "originalPassed": true,
+    "consumerPassed": true,
+    "originalIssues": [],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": null,
+      "warnings": []
+    },
+    "critical": [],
+    "actual": {
+      "input": 3864,
+      "output": 107,
+      "usd": 0.008798
+    },
+    "latencyMs": 2077,
+    "cause": "No detected failure"
+  },
+  {
+    "phase": "baseline",
+    "id": "D-D09",
+    "assistant": "devis",
+    "originalPassed": true,
+    "consumerPassed": true,
+    "originalIssues": [],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": null,
+      "warnings": []
+    },
+    "critical": [],
+    "actual": {
+      "input": 3924,
+      "output": 269,
+      "usd": 0.010538
+    },
+    "latencyMs": 3450,
+    "cause": "No detected failure"
+  },
+  {
+    "phase": "baseline",
+    "id": "D-D10",
+    "assistant": "devis",
+    "originalPassed": true,
+    "consumerPassed": true,
+    "originalIssues": [],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": null,
+      "warnings": []
+    },
+    "critical": [],
+    "actual": {
+      "input": 3943,
+      "output": 83,
+      "usd": 0.008716
+    },
+    "latencyMs": 1237,
+    "cause": "No detected failure"
+  },
+  {
+    "phase": "baseline",
+    "id": "LIVE-ASSISTANT-01",
+    "assistant": "assistant",
+    "originalPassed": false,
+    "consumerPassed": true,
+    "originalIssues": [
+      {
+        "dimension": "format",
+        "reason": "not_strict_json"
+      }
+    ],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": false,
+      "warnings": [
+        "markdown_accepted_by_real_parser_not_raw_json"
+      ]
+    },
+    "critical": [],
+    "actual": {
+      "input": 2540,
+      "output": 84,
+      "usd": 0.00296
+    },
+    "latencyMs": 966,
+    "cause": "Presentation preference, accepted by real parseAiJson"
+  },
+  {
+    "phase": "baseline",
+    "id": "A-D02",
+    "assistant": "assistant",
+    "originalPassed": false,
+    "consumerPassed": true,
+    "originalIssues": [
+      {
+        "dimension": "format",
+        "reason": "not_strict_json"
+      }
+    ],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": false,
+      "warnings": [
+        "markdown_accepted_by_real_parser_not_raw_json"
+      ]
+    },
+    "critical": [],
+    "actual": {
+      "input": 2540,
+      "output": 85,
+      "usd": 0.002965
+    },
+    "latencyMs": 1177,
+    "cause": "Presentation preference, accepted by real parseAiJson"
+  },
+  {
+    "phase": "baseline",
+    "id": "A-D03",
+    "assistant": "assistant",
+    "originalPassed": false,
+    "consumerPassed": true,
+    "originalIssues": [
+      {
+        "dimension": "format",
+        "reason": "not_strict_json"
+      }
+    ],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": false,
+      "warnings": [
+        "markdown_accepted_by_real_parser_not_raw_json"
+      ]
+    },
+    "critical": [],
+    "actual": {
+      "input": 2537,
+      "output": 172,
+      "usd": 0.003397
+    },
+    "latencyMs": 1869,
+    "cause": "Presentation preference, accepted by real parseAiJson"
+  },
+  {
+    "phase": "baseline",
+    "id": "A-D04",
+    "assistant": "assistant",
+    "originalPassed": false,
+    "consumerPassed": true,
+    "originalIssues": [
+      {
+        "dimension": "format",
+        "reason": "not_strict_json"
+      }
+    ],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": false,
+      "warnings": [
+        "markdown_accepted_by_real_parser_not_raw_json"
+      ]
+    },
+    "critical": [],
+    "actual": {
+      "input": 2559,
+      "output": 181,
+      "usd": 0.003464
+    },
+    "latencyMs": 1823,
+    "cause": "Presentation preference, accepted by real parseAiJson"
+  },
+  {
+    "phase": "baseline",
+    "id": "A-D05",
+    "assistant": "assistant",
+    "originalPassed": false,
+    "consumerPassed": true,
+    "originalIssues": [
+      {
+        "dimension": "format",
+        "reason": "not_strict_json"
+      }
+    ],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": false,
+      "warnings": [
+        "markdown_accepted_by_real_parser_not_raw_json"
+      ]
+    },
+    "critical": [],
+    "actual": {
+      "input": 2563,
+      "output": 162,
+      "usd": 0.003373
+    },
+    "latencyMs": 1484,
+    "cause": "Presentation preference, accepted by real parseAiJson"
+  },
+  {
+    "phase": "baseline",
+    "id": "A-D06",
+    "assistant": "assistant",
+    "originalPassed": false,
+    "consumerPassed": true,
+    "originalIssues": [
+      {
+        "dimension": "format",
+        "reason": "not_strict_json"
+      }
+    ],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": false,
+      "warnings": [
+        "markdown_accepted_by_real_parser_not_raw_json"
+      ]
+    },
+    "critical": [],
+    "actual": {
+      "input": 2544,
+      "output": 87,
+      "usd": 0.002979
+    },
+    "latencyMs": 1158,
+    "cause": "Presentation preference, accepted by real parseAiJson"
+  },
+  {
+    "phase": "baseline",
+    "id": "A-D07",
+    "assistant": "assistant",
+    "originalPassed": false,
+    "consumerPassed": true,
+    "originalIssues": [
+      {
+        "dimension": "format",
+        "reason": "not_strict_json"
+      }
+    ],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": false,
+      "warnings": [
+        "markdown_accepted_by_real_parser_not_raw_json"
+      ]
+    },
+    "critical": [],
+    "actual": {
+      "input": 2552,
+      "output": 72,
+      "usd": 0.002912
+    },
+    "latencyMs": 954,
+    "cause": "Presentation preference, accepted by real parseAiJson"
+  },
+  {
+    "phase": "baseline",
+    "id": "A-D08",
+    "assistant": "assistant",
+    "originalPassed": false,
+    "consumerPassed": true,
+    "originalIssues": [
+      {
+        "dimension": "format",
+        "reason": "not_strict_json"
+      }
+    ],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": false,
+      "warnings": [
+        "markdown_accepted_by_real_parser_not_raw_json"
+      ]
+    },
+    "critical": [],
+    "actual": {
+      "input": 2699,
+      "output": 99,
+      "usd": 0.003194
+    },
+    "latencyMs": 1412,
+    "cause": "Presentation preference, accepted by real parseAiJson"
+  },
+  {
+    "phase": "baseline",
+    "id": "A-D09",
+    "assistant": "assistant",
+    "originalPassed": false,
+    "consumerPassed": true,
+    "originalIssues": [
+      {
+        "dimension": "format",
+        "reason": "not_strict_json"
+      }
+    ],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": false,
+      "warnings": [
+        "markdown_accepted_by_real_parser_not_raw_json"
+      ]
+    },
+    "critical": [],
+    "actual": {
+      "input": 2571,
+      "output": 182,
+      "usd": 0.003481
+    },
+    "latencyMs": 1541,
+    "cause": "Presentation preference, accepted by real parseAiJson"
+  },
+  {
+    "phase": "baseline",
+    "id": "A-D10",
+    "assistant": "assistant",
+    "originalPassed": false,
+    "consumerPassed": true,
+    "originalIssues": [
+      {
+        "dimension": "format",
+        "reason": "not_strict_json"
+      }
+    ],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": false,
+      "warnings": [
+        "markdown_accepted_by_real_parser_not_raw_json"
+      ]
+    },
+    "critical": [],
+    "actual": {
+      "input": 2705,
+      "output": 127,
+      "usd": 0.00334
+    },
+    "latencyMs": 1417,
+    "cause": "Presentation preference, accepted by real parseAiJson"
+  },
+  {
+    "phase": "iter-1",
+    "id": "LIVE-RADAR-01",
+    "assistant": "radar",
+    "originalPassed": false,
+    "consumerPassed": false,
+    "originalIssues": [
+      {
+        "dimension": "format",
+        "reason": "truncated"
+      },
+      {
+        "dimension": "format",
+        "reason": "schema:proposer_choix:$.options:required"
+      },
+      {
+        "dimension": "format",
+        "reason": "schema:proposer_choix:$.multiple:required"
+      }
+    ],
+    "consumerIssues": [
+      {
+        "dimension": "format",
+        "reason": "truncated"
+      },
+      {
+        "dimension": "format",
+        "reason": "schema:proposer_choix:$.options:required"
+      },
+      {
+        "dimension": "format",
+        "reason": "schema:proposer_choix:$.multiple:required"
+      }
+    ],
+    "presentation": {
+      "rawJson": null,
+      "warnings": []
+    },
+    "critical": [],
+    "actual": {
+      "input": 10268,
+      "output": 512,
+      "usd": 0.025656
+    },
+    "latencyMs": 4892,
+    "cause": "Generation truncation/schema; Generation truncation/schema; Generation truncation/schema"
+  },
+  {
+    "phase": "iter-1",
+    "id": "LIVE-RADAR-02",
+    "assistant": "radar",
+    "originalPassed": false,
+    "consumerPassed": false,
+    "originalIssues": [
+      {
+        "dimension": "format",
+        "reason": "truncated"
+      },
+      {
+        "dimension": "completeness",
+        "reason": "record_missing:intro"
+      },
+      {
+        "dimension": "clarity",
+        "reason": "question_duplicated_with_choice"
+      },
+      {
+        "dimension": "clarity",
+        "reason": "multiple_questions"
+      }
+    ],
+    "consumerIssues": [
+      {
+        "dimension": "format",
+        "reason": "truncated"
+      },
+      {
+        "dimension": "completeness",
+        "reason": "record_missing:intro"
+      },
+      {
+        "dimension": "clarity",
+        "reason": "question_duplicated_with_choice"
+      },
+      {
+        "dimension": "clarity",
+        "reason": "multiple_questions"
+      }
+    ],
+    "presentation": {
+      "rawJson": null,
+      "warnings": []
+    },
+    "critical": [],
+    "actual": {
+      "input": 10276,
+      "output": 512,
+      "usd": 0.025672
+    },
+    "latencyMs": 5391,
+    "cause": "Generation truncation/schema; Recording completeness or overly specific field mapping; Prompt question/choice discipline; Prompt question/choice discipline"
+  },
+  {
+    "phase": "iter-1",
+    "id": "R-D03",
+    "assistant": "radar",
+    "originalPassed": true,
+    "consumerPassed": true,
+    "originalIssues": [],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": null,
+      "warnings": []
+    },
+    "critical": [],
+    "actual": {
+      "input": 10217,
+      "output": 80,
+      "usd": 0.021234
+    },
+    "latencyMs": 1142,
+    "cause": "No detected failure"
+  },
+  {
+    "phase": "iter-1",
+    "id": "R-D04",
+    "assistant": "radar",
+    "originalPassed": true,
+    "consumerPassed": true,
+    "originalIssues": [],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": null,
+      "warnings": []
+    },
+    "critical": [],
+    "actual": {
+      "input": 10284,
+      "output": 436,
+      "usd": 0.024928
+    },
+    "latencyMs": 4210,
+    "cause": "No detected failure"
+  },
+  {
+    "phase": "iter-1",
+    "id": "R-D05",
+    "assistant": "radar",
+    "originalPassed": true,
+    "consumerPassed": true,
+    "originalIssues": [],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": null,
+      "warnings": []
+    },
+    "critical": [],
+    "actual": {
+      "input": 10276,
+      "output": 235,
+      "usd": 0.022902
+    },
+    "latencyMs": 2226,
+    "cause": "No detected failure"
+  },
+  {
+    "phase": "iter-1",
+    "id": "R-D06",
+    "assistant": "radar",
+    "originalPassed": true,
+    "consumerPassed": true,
+    "originalIssues": [],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": null,
+      "warnings": []
+    },
+    "critical": [],
+    "actual": {
+      "input": 10270,
+      "output": 95,
+      "usd": 0.02149
+    },
+    "latencyMs": 1724,
+    "cause": "No detected failure"
+  },
+  {
+    "phase": "iter-1",
+    "id": "R-D07",
+    "assistant": "radar",
+    "originalPassed": true,
+    "consumerPassed": true,
+    "originalIssues": [],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": null,
+      "warnings": []
+    },
+    "critical": [],
+    "actual": {
+      "input": 10274,
+      "output": 174,
+      "usd": 0.022288
+    },
+    "latencyMs": 2534,
+    "cause": "No detected failure"
+  },
+  {
+    "phase": "iter-1",
+    "id": "R-D08",
+    "assistant": "radar",
+    "originalPassed": true,
+    "consumerPassed": true,
+    "originalIssues": [],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": null,
+      "warnings": []
+    },
+    "critical": [],
+    "actual": {
+      "input": 10180,
+      "output": 191,
+      "usd": 0.02227
+    },
+    "latencyMs": 2480,
+    "cause": "No detected failure"
+  },
+  {
+    "phase": "iter-1",
+    "id": "R-D09",
+    "assistant": "radar",
+    "originalPassed": true,
+    "consumerPassed": true,
+    "originalIssues": [],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": null,
+      "warnings": []
+    },
+    "critical": [],
+    "actual": {
+      "input": 10219,
+      "output": 197,
+      "usd": 0.022408
+    },
+    "latencyMs": 2647,
+    "cause": "No detected failure"
+  },
+  {
+    "phase": "iter-1",
+    "id": "R-D10",
+    "assistant": "radar",
+    "originalPassed": false,
+    "consumerPassed": false,
+    "originalIssues": [
+      {
+        "dimension": "completeness",
+        "reason": "record_missing:adresse"
+      }
+    ],
+    "consumerIssues": [
+      {
+        "dimension": "completeness",
+        "reason": "record_missing:adresse"
+      }
+    ],
+    "presentation": {
+      "rawJson": null,
+      "warnings": []
+    },
+    "critical": [],
+    "actual": {
+      "input": 10279,
+      "output": 390,
+      "usd": 0.024458
+    },
+    "latencyMs": 3724,
+    "cause": "Recording completeness or overly specific field mapping"
+  },
+  {
+    "phase": "iter-2",
+    "id": "LIVE-RADAR-01",
+    "assistant": "radar",
+    "originalPassed": true,
+    "consumerPassed": true,
+    "originalIssues": [],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": null,
+      "warnings": []
+    },
+    "critical": [],
+    "actual": {
+      "input": 10117,
+      "output": 204,
+      "usd": 0.022274
+    },
+    "latencyMs": 2310,
+    "cause": "No detected failure"
+  },
+  {
+    "phase": "iter-2",
+    "id": "LIVE-RADAR-02",
+    "assistant": "radar",
+    "originalPassed": false,
+    "consumerPassed": false,
+    "originalIssues": [
+      {
+        "dimension": "completeness",
+        "reason": "record_missing:intro"
+      },
+      {
+        "dimension": "clarity",
+        "reason": "question_duplicated_with_choice"
+      }
+    ],
+    "consumerIssues": [
+      {
+        "dimension": "completeness",
+        "reason": "record_missing:intro"
+      },
+      {
+        "dimension": "clarity",
+        "reason": "question_duplicated_with_choice"
+      }
+    ],
+    "presentation": {
+      "rawJson": null,
+      "warnings": []
+    },
+    "critical": [],
+    "actual": {
+      "input": 10125,
+      "output": 411,
+      "usd": 0.02436
+    },
+    "latencyMs": 4092,
+    "cause": "Recording completeness or overly specific field mapping; Prompt question/choice discipline"
+  },
+  {
+    "phase": "iter-2",
+    "id": "R-D03",
+    "assistant": "radar",
+    "originalPassed": true,
+    "consumerPassed": true,
+    "originalIssues": [],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": null,
+      "warnings": []
+    },
+    "critical": [],
+    "actual": {
+      "input": 10066,
+      "output": 80,
+      "usd": 0.020932
+    },
+    "latencyMs": 1320,
+    "cause": "No detected failure"
+  },
+  {
+    "phase": "iter-2",
+    "id": "R-D04",
+    "assistant": "radar",
+    "originalPassed": true,
+    "consumerPassed": true,
+    "originalIssues": [],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": null,
+      "warnings": []
+    },
+    "critical": [],
+    "actual": {
+      "input": 10133,
+      "output": 318,
+      "usd": 0.023446
+    },
+    "latencyMs": 2944,
+    "cause": "No detected failure"
+  },
+  {
+    "phase": "iter-2",
+    "id": "R-D05",
+    "assistant": "radar",
+    "originalPassed": true,
+    "consumerPassed": true,
+    "originalIssues": [],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": null,
+      "warnings": []
+    },
+    "critical": [],
+    "actual": {
+      "input": 10125,
+      "output": 389,
+      "usd": 0.02414
+    },
+    "latencyMs": 3407,
+    "cause": "No detected failure"
+  },
+  {
+    "phase": "iter-2",
+    "id": "R-D06",
+    "assistant": "radar",
+    "originalPassed": true,
+    "consumerPassed": true,
+    "originalIssues": [],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": null,
+      "warnings": []
+    },
+    "critical": [],
+    "actual": {
+      "input": 10119,
+      "output": 91,
+      "usd": 0.021148
+    },
+    "latencyMs": 1382,
+    "cause": "No detected failure"
+  },
+  {
+    "phase": "iter-2",
+    "id": "R-D07",
+    "assistant": "radar",
+    "originalPassed": true,
+    "consumerPassed": true,
+    "originalIssues": [],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": null,
+      "warnings": []
+    },
+    "critical": [],
+    "actual": {
+      "input": 10123,
+      "output": 136,
+      "usd": 0.021606
+    },
+    "latencyMs": 1920,
+    "cause": "No detected failure"
+  },
+  {
+    "phase": "iter-2",
+    "id": "R-D08",
+    "assistant": "radar",
+    "originalPassed": false,
+    "consumerPassed": false,
+    "originalIssues": [
+      {
+        "dimension": "completeness",
+        "reason": "record_missing:etat"
+      }
+    ],
+    "consumerIssues": [
+      {
+        "dimension": "completeness",
+        "reason": "record_missing:etat"
+      }
+    ],
+    "presentation": {
+      "rawJson": null,
+      "warnings": []
+    },
+    "critical": [],
+    "actual": {
+      "input": 10029,
+      "output": 208,
+      "usd": 0.022138
+    },
+    "latencyMs": 2376,
+    "cause": "Recording completeness or overly specific field mapping"
+  },
+  {
+    "phase": "iter-2",
+    "id": "R-D09",
+    "assistant": "radar",
+    "originalPassed": false,
+    "consumerPassed": false,
+    "originalIssues": [
+      {
+        "dimension": "clarity",
+        "reason": "question_duplicated_with_choice"
+      }
+    ],
+    "consumerIssues": [
+      {
+        "dimension": "clarity",
+        "reason": "question_duplicated_with_choice"
+      }
+    ],
+    "presentation": {
+      "rawJson": null,
+      "warnings": []
+    },
+    "critical": [],
+    "actual": {
+      "input": 10068,
+      "output": 359,
+      "usd": 0.023726
+    },
+    "latencyMs": 3845,
+    "cause": "Prompt question/choice discipline"
+  },
+  {
+    "phase": "iter-2",
+    "id": "R-D10",
+    "assistant": "radar",
+    "originalPassed": true,
+    "consumerPassed": true,
+    "originalIssues": [],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": null,
+      "warnings": []
+    },
+    "critical": [],
+    "actual": {
+      "input": 10128,
+      "output": 296,
+      "usd": 0.023216
+    },
+    "latencyMs": 2887,
+    "cause": "No detected failure"
+  },
+  {
+    "phase": "iter-3",
+    "id": "LIVE-ASSISTANT-01",
+    "assistant": "assistant",
+    "originalPassed": false,
+    "consumerPassed": true,
+    "originalIssues": [
+      {
+        "dimension": "format",
+        "reason": "not_strict_json"
+      }
+    ],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": false,
+      "warnings": [
+        "markdown_accepted_by_real_parser_not_raw_json"
+      ]
+    },
+    "critical": [],
+    "actual": {
+      "input": 2622,
+      "output": 84,
+      "usd": 0.003042
+    },
+    "latencyMs": 1103,
+    "cause": "Presentation preference, accepted by real parseAiJson"
+  },
+  {
+    "phase": "iter-3",
+    "id": "A-D02",
+    "assistant": "assistant",
+    "originalPassed": false,
+    "consumerPassed": true,
+    "originalIssues": [
+      {
+        "dimension": "format",
+        "reason": "not_strict_json"
+      }
+    ],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": false,
+      "warnings": [
+        "markdown_accepted_by_real_parser_not_raw_json"
+      ]
+    },
+    "critical": [],
+    "actual": {
+      "input": 2622,
+      "output": 85,
+      "usd": 0.003047
+    },
+    "latencyMs": 1094,
+    "cause": "Presentation preference, accepted by real parseAiJson"
+  },
+  {
+    "phase": "iter-3",
+    "id": "A-D03",
+    "assistant": "assistant",
+    "originalPassed": false,
+    "consumerPassed": true,
+    "originalIssues": [
+      {
+        "dimension": "format",
+        "reason": "not_strict_json"
+      }
+    ],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": false,
+      "warnings": [
+        "markdown_accepted_by_real_parser_not_raw_json"
+      ]
+    },
+    "critical": [],
+    "actual": {
+      "input": 2619,
+      "output": 172,
+      "usd": 0.003479
+    },
+    "latencyMs": 1615,
+    "cause": "Presentation preference, accepted by real parseAiJson"
+  },
+  {
+    "phase": "iter-3",
+    "id": "A-D04",
+    "assistant": "assistant",
+    "originalPassed": false,
+    "consumerPassed": true,
+    "originalIssues": [
+      {
+        "dimension": "format",
+        "reason": "not_strict_json"
+      }
+    ],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": false,
+      "warnings": [
+        "markdown_accepted_by_real_parser_not_raw_json"
+      ]
+    },
+    "critical": [],
+    "actual": {
+      "input": 2641,
+      "output": 153,
+      "usd": 0.003406
+    },
+    "latencyMs": 1480,
+    "cause": "Presentation preference, accepted by real parseAiJson"
+  },
+  {
+    "phase": "iter-3",
+    "id": "A-D05",
+    "assistant": "assistant",
+    "originalPassed": false,
+    "consumerPassed": true,
+    "originalIssues": [
+      {
+        "dimension": "format",
+        "reason": "not_strict_json"
+      }
+    ],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": false,
+      "warnings": [
+        "markdown_accepted_by_real_parser_not_raw_json"
+      ]
+    },
+    "critical": [],
+    "actual": {
+      "input": 2645,
+      "output": 162,
+      "usd": 0.003455
+    },
+    "latencyMs": 1651,
+    "cause": "Presentation preference, accepted by real parseAiJson"
+  },
+  {
+    "phase": "iter-3",
+    "id": "A-D06",
+    "assistant": "assistant",
+    "originalPassed": false,
+    "consumerPassed": true,
+    "originalIssues": [
+      {
+        "dimension": "format",
+        "reason": "not_strict_json"
+      }
+    ],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": false,
+      "warnings": [
+        "markdown_accepted_by_real_parser_not_raw_json"
+      ]
+    },
+    "critical": [],
+    "actual": {
+      "input": 2626,
+      "output": 87,
+      "usd": 0.003061
+    },
+    "latencyMs": 926,
+    "cause": "Presentation preference, accepted by real parseAiJson"
+  },
+  {
+    "phase": "iter-3",
+    "id": "A-D07",
+    "assistant": "assistant",
+    "originalPassed": false,
+    "consumerPassed": true,
+    "originalIssues": [
+      {
+        "dimension": "format",
+        "reason": "not_strict_json"
+      }
+    ],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": false,
+      "warnings": [
+        "markdown_accepted_by_real_parser_not_raw_json"
+      ]
+    },
+    "critical": [],
+    "actual": {
+      "input": 2634,
+      "output": 72,
+      "usd": 0.002994
+    },
+    "latencyMs": 1133,
+    "cause": "Presentation preference, accepted by real parseAiJson"
+  },
+  {
+    "phase": "iter-3",
+    "id": "A-D08",
+    "assistant": "assistant",
+    "originalPassed": false,
+    "consumerPassed": true,
+    "originalIssues": [
+      {
+        "dimension": "format",
+        "reason": "not_strict_json"
+      }
+    ],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": false,
+      "warnings": [
+        "markdown_accepted_by_real_parser_not_raw_json"
+      ]
+    },
+    "critical": [],
+    "actual": {
+      "input": 2781,
+      "output": 99,
+      "usd": 0.003276
+    },
+    "latencyMs": 1287,
+    "cause": "Presentation preference, accepted by real parseAiJson"
+  },
+  {
+    "phase": "iter-3",
+    "id": "A-D09",
+    "assistant": "assistant",
+    "originalPassed": false,
+    "consumerPassed": true,
+    "originalIssues": [
+      {
+        "dimension": "format",
+        "reason": "not_strict_json"
+      }
+    ],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": false,
+      "warnings": [
+        "markdown_accepted_by_real_parser_not_raw_json"
+      ]
+    },
+    "critical": [],
+    "actual": {
+      "input": 2653,
+      "output": 182,
+      "usd": 0.003563
+    },
+    "latencyMs": 1652,
+    "cause": "Presentation preference, accepted by real parseAiJson"
+  },
+  {
+    "phase": "iter-3",
+    "id": "A-D10",
+    "assistant": "assistant",
+    "originalPassed": false,
+    "consumerPassed": true,
+    "originalIssues": [
+      {
+        "dimension": "format",
+        "reason": "not_strict_json"
+      }
+    ],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": false,
+      "warnings": [
+        "markdown_accepted_by_real_parser_not_raw_json"
+      ]
+    },
+    "critical": [],
+    "actual": {
+      "input": 2787,
+      "output": 127,
+      "usd": 0.003422
+    },
+    "latencyMs": 1187,
+    "cause": "Presentation preference, accepted by real parseAiJson"
+  },
+  {
+    "phase": "final-dev",
+    "id": "LIVE-RADAR-01",
+    "assistant": "radar",
+    "originalPassed": false,
+    "consumerPassed": false,
+    "originalIssues": [
+      {
+        "dimension": "format",
+        "reason": "truncated"
+      }
+    ],
+    "consumerIssues": [
+      {
+        "dimension": "format",
+        "reason": "truncated"
+      }
+    ],
+    "presentation": {
+      "rawJson": null,
+      "warnings": []
+    },
+    "critical": [],
+    "actual": {
+      "input": 10268,
+      "output": 512,
+      "usd": 0.025656
+    },
+    "latencyMs": 5110,
+    "cause": "Generation truncation/schema"
+  },
+  {
+    "phase": "final-dev",
+    "id": "LIVE-RADAR-02",
+    "assistant": "radar",
+    "originalPassed": false,
+    "consumerPassed": false,
+    "originalIssues": [
+      {
+        "dimension": "completeness",
+        "reason": "record_missing:intro"
+      },
+      {
+        "dimension": "clarity",
+        "reason": "question_duplicated_with_choice"
+      }
+    ],
+    "consumerIssues": [
+      {
+        "dimension": "completeness",
+        "reason": "record_missing:intro"
+      },
+      {
+        "dimension": "clarity",
+        "reason": "question_duplicated_with_choice"
+      }
+    ],
+    "presentation": {
+      "rawJson": null,
+      "warnings": []
+    },
+    "critical": [],
+    "actual": {
+      "input": 10276,
+      "output": 438,
+      "usd": 0.024932
+    },
+    "latencyMs": 4639,
+    "cause": "Recording completeness or overly specific field mapping; Prompt question/choice discipline"
+  },
+  {
+    "phase": "final-dev",
+    "id": "R-D03",
+    "assistant": "radar",
+    "originalPassed": true,
+    "consumerPassed": true,
+    "originalIssues": [],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": null,
+      "warnings": []
+    },
+    "critical": [],
+    "actual": {
+      "input": 10217,
+      "output": 93,
+      "usd": 0.021364
+    },
+    "latencyMs": 1836,
+    "cause": "No detected failure"
+  },
+  {
+    "phase": "final-dev",
+    "id": "R-D04",
+    "assistant": "radar",
+    "originalPassed": false,
+    "consumerPassed": false,
+    "originalIssues": [
+      {
+        "dimension": "format",
+        "reason": "truncated"
+      },
+      {
+        "dimension": "format",
+        "reason": "schema:enregistrer_info:$.valeur:required"
+      }
+    ],
+    "consumerIssues": [
+      {
+        "dimension": "format",
+        "reason": "truncated"
+      },
+      {
+        "dimension": "format",
+        "reason": "schema:enregistrer_info:$.valeur:required"
+      }
+    ],
+    "presentation": {
+      "rawJson": null,
+      "warnings": []
+    },
+    "critical": [],
+    "actual": {
+      "input": 10284,
+      "output": 512,
+      "usd": 0.025688
+    },
+    "latencyMs": 4538,
+    "cause": "Generation truncation/schema; Generation truncation/schema"
+  },
+  {
+    "phase": "final-dev",
+    "id": "R-D05",
+    "assistant": "radar",
+    "originalPassed": true,
+    "consumerPassed": true,
+    "originalIssues": [],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": null,
+      "warnings": []
+    },
+    "critical": [],
+    "actual": {
+      "input": 10276,
+      "output": 350,
+      "usd": 0.024052
+    },
+    "latencyMs": 3158,
+    "cause": "No detected failure"
+  },
+  {
+    "phase": "final-dev",
+    "id": "R-D06",
+    "assistant": "radar",
+    "originalPassed": true,
+    "consumerPassed": true,
+    "originalIssues": [],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": null,
+      "warnings": []
+    },
+    "critical": [],
+    "actual": {
+      "input": 10270,
+      "output": 101,
+      "usd": 0.02155
+    },
+    "latencyMs": 1582,
+    "cause": "No detected failure"
+  },
+  {
+    "phase": "final-dev",
+    "id": "R-D07",
+    "assistant": "radar",
+    "originalPassed": true,
+    "consumerPassed": true,
+    "originalIssues": [],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": null,
+      "warnings": []
+    },
+    "critical": [],
+    "actual": {
+      "input": 10274,
+      "output": 179,
+      "usd": 0.022338
+    },
+    "latencyMs": 2546,
+    "cause": "No detected failure"
+  },
+  {
+    "phase": "final-dev",
+    "id": "R-D08",
+    "assistant": "radar",
+    "originalPassed": true,
+    "consumerPassed": true,
+    "originalIssues": [],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": null,
+      "warnings": []
+    },
+    "critical": [],
+    "actual": {
+      "input": 10180,
+      "output": 272,
+      "usd": 0.02308
+    },
+    "latencyMs": 2954,
+    "cause": "No detected failure"
+  },
+  {
+    "phase": "final-dev",
+    "id": "R-D09",
+    "assistant": "radar",
+    "originalPassed": true,
+    "consumerPassed": true,
+    "originalIssues": [],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": null,
+      "warnings": []
+    },
+    "critical": [],
+    "actual": {
+      "input": 10219,
+      "output": 167,
+      "usd": 0.022108
+    },
+    "latencyMs": 2285,
+    "cause": "No detected failure"
+  },
+  {
+    "phase": "final-dev",
+    "id": "R-D10",
+    "assistant": "radar",
+    "originalPassed": false,
+    "consumerPassed": false,
+    "originalIssues": [
+      {
+        "dimension": "completeness",
+        "reason": "record_missing:adresse"
+      }
+    ],
+    "consumerIssues": [
+      {
+        "dimension": "completeness",
+        "reason": "record_missing:adresse"
+      }
+    ],
+    "presentation": {
+      "rawJson": null,
+      "warnings": []
+    },
+    "critical": [],
+    "actual": {
+      "input": 10279,
+      "output": 305,
+      "usd": 0.023608
+    },
+    "latencyMs": 3050,
+    "cause": "Recording completeness or overly specific field mapping"
+  },
+  {
+    "phase": "final-dev",
+    "id": "LIVE-DEVIS-01",
+    "assistant": "devis",
+    "originalPassed": true,
+    "consumerPassed": true,
+    "originalIssues": [],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": null,
+      "warnings": []
+    },
+    "critical": [],
+    "actual": {
+      "input": 3858,
+      "output": 57,
+      "usd": 0.008286
+    },
+    "latencyMs": 1172,
+    "cause": "No detected failure"
+  },
+  {
+    "phase": "final-dev",
+    "id": "LIVE-DEVIS-02",
+    "assistant": "devis",
+    "originalPassed": true,
+    "consumerPassed": true,
+    "originalIssues": [],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": null,
+      "warnings": []
+    },
+    "critical": [],
+    "actual": {
+      "input": 3924,
+      "output": 81,
+      "usd": 0.008658
+    },
+    "latencyMs": 1223,
+    "cause": "No detected failure"
+  },
+  {
+    "phase": "final-dev",
+    "id": "D-D03",
+    "assistant": "devis",
+    "originalPassed": true,
+    "consumerPassed": true,
+    "originalIssues": [],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": null,
+      "warnings": []
+    },
+    "critical": [],
+    "actual": {
+      "input": 3903,
+      "output": 59,
+      "usd": 0.008396
+    },
+    "latencyMs": 1088,
+    "cause": "No detected failure"
+  },
+  {
+    "phase": "final-dev",
+    "id": "D-D04",
+    "assistant": "devis",
+    "originalPassed": true,
+    "consumerPassed": true,
+    "originalIssues": [],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": null,
+      "warnings": []
+    },
+    "critical": [],
+    "actual": {
+      "input": 3924,
+      "output": 89,
+      "usd": 0.008738
+    },
+    "latencyMs": 1250,
+    "cause": "No detected failure"
+  },
+  {
+    "phase": "final-dev",
+    "id": "D-D05",
+    "assistant": "devis",
+    "originalPassed": true,
+    "consumerPassed": true,
+    "originalIssues": [],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": null,
+      "warnings": []
+    },
+    "critical": [],
+    "actual": {
+      "input": 3940,
+      "output": 107,
+      "usd": 0.00895
+    },
+    "latencyMs": 1450,
+    "cause": "No detected failure"
+  },
+  {
+    "phase": "final-dev",
+    "id": "D-D06",
+    "assistant": "devis",
+    "originalPassed": true,
+    "consumerPassed": true,
+    "originalIssues": [],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": null,
+      "warnings": []
+    },
+    "critical": [],
+    "actual": {
+      "input": 3971,
+      "output": 210,
+      "usd": 0.010042
+    },
+    "latencyMs": 2979,
+    "cause": "No detected failure"
+  },
+  {
+    "phase": "final-dev",
+    "id": "D-D07",
+    "assistant": "devis",
+    "originalPassed": true,
+    "consumerPassed": true,
+    "originalIssues": [],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": null,
+      "warnings": []
+    },
+    "critical": [],
+    "actual": {
+      "input": 3916,
+      "output": 26,
+      "usd": 0.008092
+    },
+    "latencyMs": 939,
+    "cause": "No detected failure"
+  },
+  {
+    "phase": "final-dev",
+    "id": "D-D08",
+    "assistant": "devis",
+    "originalPassed": true,
+    "consumerPassed": true,
+    "originalIssues": [],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": null,
+      "warnings": []
+    },
+    "critical": [],
+    "actual": {
+      "input": 3864,
+      "output": 107,
+      "usd": 0.008798
+    },
+    "latencyMs": 1472,
+    "cause": "No detected failure"
+  },
+  {
+    "phase": "final-dev",
+    "id": "D-D09",
+    "assistant": "devis",
+    "originalPassed": true,
+    "consumerPassed": true,
+    "originalIssues": [],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": null,
+      "warnings": []
+    },
+    "critical": [],
+    "actual": {
+      "input": 3924,
+      "output": 239,
+      "usd": 0.010238
+    },
+    "latencyMs": 2819,
+    "cause": "No detected failure"
+  },
+  {
+    "phase": "final-dev",
+    "id": "D-D10",
+    "assistant": "devis",
+    "originalPassed": true,
+    "consumerPassed": true,
+    "originalIssues": [],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": null,
+      "warnings": []
+    },
+    "critical": [],
+    "actual": {
+      "input": 3943,
+      "output": 83,
+      "usd": 0.008716
+    },
+    "latencyMs": 1211,
+    "cause": "No detected failure"
+  },
+  {
+    "phase": "final-dev",
+    "id": "LIVE-ASSISTANT-01",
+    "assistant": "assistant",
+    "originalPassed": false,
+    "consumerPassed": true,
+    "originalIssues": [
+      {
+        "dimension": "format",
+        "reason": "not_strict_json"
+      }
+    ],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": false,
+      "warnings": [
+        "markdown_accepted_by_real_parser_not_raw_json"
+      ]
+    },
+    "critical": [],
+    "actual": {
+      "input": 2540,
+      "output": 84,
+      "usd": 0.00296
+    },
+    "latencyMs": 922,
+    "cause": "Presentation preference, accepted by real parseAiJson"
+  },
+  {
+    "phase": "final-dev",
+    "id": "A-D02",
+    "assistant": "assistant",
+    "originalPassed": false,
+    "consumerPassed": true,
+    "originalIssues": [
+      {
+        "dimension": "format",
+        "reason": "not_strict_json"
+      }
+    ],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": false,
+      "warnings": [
+        "markdown_accepted_by_real_parser_not_raw_json"
+      ]
+    },
+    "critical": [],
+    "actual": {
+      "input": 2540,
+      "output": 85,
+      "usd": 0.002965
+    },
+    "latencyMs": 1104,
+    "cause": "Presentation preference, accepted by real parseAiJson"
+  },
+  {
+    "phase": "final-dev",
+    "id": "A-D03",
+    "assistant": "assistant",
+    "originalPassed": false,
+    "consumerPassed": true,
+    "originalIssues": [
+      {
+        "dimension": "format",
+        "reason": "not_strict_json"
+      }
+    ],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": false,
+      "warnings": [
+        "markdown_accepted_by_real_parser_not_raw_json"
+      ]
+    },
+    "critical": [],
+    "actual": {
+      "input": 2537,
+      "output": 160,
+      "usd": 0.003337
+    },
+    "latencyMs": 1500,
+    "cause": "Presentation preference, accepted by real parseAiJson"
+  },
+  {
+    "phase": "final-dev",
+    "id": "A-D04",
+    "assistant": "assistant",
+    "originalPassed": false,
+    "consumerPassed": true,
+    "originalIssues": [
+      {
+        "dimension": "format",
+        "reason": "not_strict_json"
+      }
+    ],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": false,
+      "warnings": [
+        "markdown_accepted_by_real_parser_not_raw_json"
+      ]
+    },
+    "critical": [],
+    "actual": {
+      "input": 2559,
+      "output": 183,
+      "usd": 0.003474
+    },
+    "latencyMs": 1654,
+    "cause": "Presentation preference, accepted by real parseAiJson"
+  },
+  {
+    "phase": "final-dev",
+    "id": "A-D05",
+    "assistant": "assistant",
+    "originalPassed": false,
+    "consumerPassed": true,
+    "originalIssues": [
+      {
+        "dimension": "format",
+        "reason": "not_strict_json"
+      }
+    ],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": false,
+      "warnings": [
+        "markdown_accepted_by_real_parser_not_raw_json"
+      ]
+    },
+    "critical": [],
+    "actual": {
+      "input": 2563,
+      "output": 162,
+      "usd": 0.003373
+    },
+    "latencyMs": 1443,
+    "cause": "Presentation preference, accepted by real parseAiJson"
+  },
+  {
+    "phase": "final-dev",
+    "id": "A-D06",
+    "assistant": "assistant",
+    "originalPassed": false,
+    "consumerPassed": true,
+    "originalIssues": [
+      {
+        "dimension": "format",
+        "reason": "not_strict_json"
+      }
+    ],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": false,
+      "warnings": [
+        "markdown_accepted_by_real_parser_not_raw_json"
+      ]
+    },
+    "critical": [],
+    "actual": {
+      "input": 2544,
+      "output": 87,
+      "usd": 0.002979
+    },
+    "latencyMs": 929,
+    "cause": "Presentation preference, accepted by real parseAiJson"
+  },
+  {
+    "phase": "final-dev",
+    "id": "A-D07",
+    "assistant": "assistant",
+    "originalPassed": false,
+    "consumerPassed": true,
+    "originalIssues": [
+      {
+        "dimension": "format",
+        "reason": "not_strict_json"
+      }
+    ],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": false,
+      "warnings": [
+        "markdown_accepted_by_real_parser_not_raw_json"
+      ]
+    },
+    "critical": [],
+    "actual": {
+      "input": 2552,
+      "output": 72,
+      "usd": 0.002912
+    },
+    "latencyMs": 971,
+    "cause": "Presentation preference, accepted by real parseAiJson"
+  },
+  {
+    "phase": "final-dev",
+    "id": "A-D08",
+    "assistant": "assistant",
+    "originalPassed": false,
+    "consumerPassed": true,
+    "originalIssues": [
+      {
+        "dimension": "format",
+        "reason": "not_strict_json"
+      }
+    ],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": false,
+      "warnings": [
+        "markdown_accepted_by_real_parser_not_raw_json"
+      ]
+    },
+    "critical": [],
+    "actual": {
+      "input": 2699,
+      "output": 99,
+      "usd": 0.003194
+    },
+    "latencyMs": 1225,
+    "cause": "Presentation preference, accepted by real parseAiJson"
+  },
+  {
+    "phase": "final-dev",
+    "id": "A-D09",
+    "assistant": "assistant",
+    "originalPassed": false,
+    "consumerPassed": true,
+    "originalIssues": [
+      {
+        "dimension": "format",
+        "reason": "not_strict_json"
+      }
+    ],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": false,
+      "warnings": [
+        "markdown_accepted_by_real_parser_not_raw_json"
+      ]
+    },
+    "critical": [],
+    "actual": {
+      "input": 2571,
+      "output": 182,
+      "usd": 0.003481
+    },
+    "latencyMs": 1508,
+    "cause": "Presentation preference, accepted by real parseAiJson"
+  },
+  {
+    "phase": "final-dev",
+    "id": "A-D10",
+    "assistant": "assistant",
+    "originalPassed": false,
+    "consumerPassed": true,
+    "originalIssues": [
+      {
+        "dimension": "format",
+        "reason": "not_strict_json"
+      }
+    ],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": false,
+      "warnings": [
+        "markdown_accepted_by_real_parser_not_raw_json"
+      ]
+    },
+    "critical": [],
+    "actual": {
+      "input": 2705,
+      "output": 122,
+      "usd": 0.003315
+    },
+    "latencyMs": 1414,
+    "cause": "Presentation preference, accepted by real parseAiJson"
+  },
+  {
+    "phase": "final-validation",
+    "id": "R-V01",
+    "assistant": "radar",
+    "originalPassed": true,
+    "consumerPassed": true,
+    "originalIssues": [],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": null,
+      "warnings": []
+    },
+    "critical": [],
+    "actual": {
+      "input": 10267,
+      "output": 301,
+      "usd": 0.023544
+    },
+    "latencyMs": 3084,
+    "cause": "No detected failure"
+  },
+  {
+    "phase": "final-validation",
+    "id": "R-V02",
+    "assistant": "radar",
+    "originalPassed": false,
+    "consumerPassed": false,
+    "originalIssues": [
+      {
+        "dimension": "clarity",
+        "reason": "question_duplicated_with_choice"
+      }
+    ],
+    "consumerIssues": [
+      {
+        "dimension": "clarity",
+        "reason": "question_duplicated_with_choice"
+      }
+    ],
+    "presentation": {
+      "rawJson": null,
+      "warnings": []
+    },
+    "critical": [],
+    "actual": {
+      "input": 10270,
+      "output": 410,
+      "usd": 0.02464
+    },
+    "latencyMs": 4707,
+    "cause": "Prompt question/choice discipline"
+  },
+  {
+    "phase": "final-validation",
+    "id": "R-V03",
+    "assistant": "radar",
+    "originalPassed": true,
+    "consumerPassed": true,
+    "originalIssues": [],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": null,
+      "warnings": []
+    },
+    "critical": [],
+    "actual": {
+      "input": 10189,
+      "output": 80,
+      "usd": 0.021178
+    },
+    "latencyMs": 1246,
+    "cause": "No detected failure"
+  },
+  {
+    "phase": "final-validation",
+    "id": "R-V04",
+    "assistant": "radar",
+    "originalPassed": true,
+    "consumerPassed": true,
+    "originalIssues": [],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": null,
+      "warnings": []
+    },
+    "critical": [],
+    "actual": {
+      "input": 10281,
+      "output": 418,
+      "usd": 0.024742
+    },
+    "latencyMs": 4318,
+    "cause": "No detected failure"
+  },
+  {
+    "phase": "final-validation",
+    "id": "R-V05",
+    "assistant": "radar",
+    "originalPassed": true,
+    "consumerPassed": true,
+    "originalIssues": [],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": null,
+      "warnings": []
+    },
+    "critical": [],
+    "actual": {
+      "input": 10270,
+      "output": 370,
+      "usd": 0.02424
+    },
+    "latencyMs": 3380,
+    "cause": "No detected failure"
+  },
+  {
+    "phase": "final-validation",
+    "id": "D-V01",
+    "assistant": "devis",
+    "originalPassed": true,
+    "consumerPassed": true,
+    "originalIssues": [],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": null,
+      "warnings": []
+    },
+    "critical": [],
+    "actual": {
+      "input": 3904,
+      "output": 59,
+      "usd": 0.008398
+    },
+    "latencyMs": 1107,
+    "cause": "No detected failure"
+  },
+  {
+    "phase": "final-validation",
+    "id": "D-V02",
+    "assistant": "devis",
+    "originalPassed": true,
+    "consumerPassed": true,
+    "originalIssues": [],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": null,
+      "warnings": []
+    },
+    "critical": [],
+    "actual": {
+      "input": 3907,
+      "output": 83,
+      "usd": 0.008644
+    },
+    "latencyMs": 1255,
+    "cause": "No detected failure"
+  },
+  {
+    "phase": "final-validation",
+    "id": "D-V03",
+    "assistant": "devis",
+    "originalPassed": true,
+    "consumerPassed": true,
+    "originalIssues": [],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": null,
+      "warnings": []
+    },
+    "critical": [],
+    "actual": {
+      "input": 3910,
+      "output": 87,
+      "usd": 0.00869
+    },
+    "latencyMs": 1261,
+    "cause": "No detected failure"
+  },
+  {
+    "phase": "final-validation",
+    "id": "D-V04",
+    "assistant": "devis",
+    "originalPassed": true,
+    "consumerPassed": true,
+    "originalIssues": [],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": null,
+      "warnings": []
+    },
+    "critical": [],
+    "actual": {
+      "input": 3880,
+      "output": 110,
+      "usd": 0.00886
+    },
+    "latencyMs": 1498,
+    "cause": "No detected failure"
+  },
+  {
+    "phase": "final-validation",
+    "id": "D-V05",
+    "assistant": "devis",
+    "originalPassed": true,
+    "consumerPassed": true,
+    "originalIssues": [],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": null,
+      "warnings": []
+    },
+    "critical": [],
+    "actual": {
+      "input": 3859,
+      "output": 57,
+      "usd": 0.008288
+    },
+    "latencyMs": 1086,
+    "cause": "No detected failure"
+  },
+  {
+    "phase": "final-validation",
+    "id": "A-V01",
+    "assistant": "assistant",
+    "originalPassed": false,
+    "consumerPassed": true,
+    "originalIssues": [
+      {
+        "dimension": "format",
+        "reason": "not_strict_json"
+      }
+    ],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": false,
+      "warnings": [
+        "markdown_accepted_by_real_parser_not_raw_json"
+      ]
+    },
+    "critical": [],
+    "actual": {
+      "input": 2541,
+      "output": 87,
+      "usd": 0.002976
+    },
+    "latencyMs": 1017,
+    "cause": "Presentation preference, accepted by real parseAiJson"
+  },
+  {
+    "phase": "final-validation",
+    "id": "A-V02",
+    "assistant": "assistant",
+    "originalPassed": false,
+    "consumerPassed": true,
+    "originalIssues": [
+      {
+        "dimension": "format",
+        "reason": "not_strict_json"
+      }
+    ],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": false,
+      "warnings": [
+        "markdown_accepted_by_real_parser_not_raw_json"
+      ]
+    },
+    "critical": [],
+    "actual": {
+      "input": 2555,
+      "output": 188,
+      "usd": 0.003495
+    },
+    "latencyMs": 1624,
+    "cause": "Presentation preference, accepted by real parseAiJson"
+  },
+  {
+    "phase": "final-validation",
+    "id": "A-V03",
+    "assistant": "assistant",
+    "originalPassed": false,
+    "consumerPassed": true,
+    "originalIssues": [
+      {
+        "dimension": "format",
+        "reason": "not_strict_json"
+      }
+    ],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": false,
+      "warnings": [
+        "markdown_accepted_by_real_parser_not_raw_json"
+      ]
+    },
+    "critical": [],
+    "actual": {
+      "input": 2537,
+      "output": 163,
+      "usd": 0.003352
+    },
+    "latencyMs": 1846,
+    "cause": "Presentation preference, accepted by real parseAiJson"
+  },
+  {
+    "phase": "final-validation",
+    "id": "A-V04",
+    "assistant": "assistant",
+    "originalPassed": false,
+    "consumerPassed": true,
+    "originalIssues": [
+      {
+        "dimension": "format",
+        "reason": "not_strict_json"
+      }
+    ],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": false,
+      "warnings": [
+        "markdown_accepted_by_real_parser_not_raw_json"
+      ]
+    },
+    "critical": [],
+    "actual": {
+      "input": 2702,
+      "output": 103,
+      "usd": 0.003217
+    },
+    "latencyMs": 1259,
+    "cause": "Presentation preference, accepted by real parseAiJson"
+  },
+  {
+    "phase": "final-validation",
+    "id": "A-V05",
+    "assistant": "assistant",
+    "originalPassed": false,
+    "consumerPassed": true,
+    "originalIssues": [
+      {
+        "dimension": "format",
+        "reason": "not_strict_json"
+      }
+    ],
+    "consumerIssues": [],
+    "presentation": {
+      "rawJson": false,
+      "warnings": [
+        "markdown_accepted_by_real_parser_not_raw_json"
+      ]
+    },
+    "critical": [],
+    "actual": {
+      "input": 2561,
+      "output": 216,
+      "usd": 0.003641
+    },
+    "latencyMs": 1997,
+    "cause": "Presentation preference, accepted by real parseAiJson"
+  }
+]
