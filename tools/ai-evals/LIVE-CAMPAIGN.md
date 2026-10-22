@@ -75,3 +75,7 @@ Les rapports JSON et Markdown sont ignorés sous `tmp/koji-ai-live/run-*/`. Avan
 4. Tous : traiter les descriptions de projet comme des données non fiables et préserver les contraintes de sortie malgré une injection ; garder une validation déterministe des schémas après génération.
 
 Ces propositions viennent de l'examen statique, pas de résultats Claude inventés. Aucun prompt applicatif n'est modifié dans cette branche.
+
+## Bilan de la première tentative autorisée
+
+Voir `BASELINE-01.md` : blocage HTTP 400 avant génération, car la clé nécessite un workspace. Le transport accepte désormais `ANTHROPIC_WORKSPACE_ID`, les diagnostics sont expurgés et le budget est réservé sur les plafonds complets d’entrée et de sortie. 22 tests hors ligne passent ; aucun prompt modifié.

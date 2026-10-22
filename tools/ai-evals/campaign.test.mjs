@@ -80,3 +80,37 @@ test('full campaign reservations fail closed before generation when aggregate bu
   assert.equal(generated, 0);
   assert.ok(state.reservedUsd <= 1);
 });
+
+test('sanitized HTTP diagnostics never include provider messages or credential echoes', async () => {
+  const { decodeResponse } = await import('./claude-transport.mjs');
+  assert.throws(() => decodeResponse('{"error":{"type":"authentication_error","message":"sensitive-echo"}}\n401', 22), /Anthropic HTTP 401 \(authentication_error\)/);
+  try { decodeResponse('{"error":{"type":"authentication_error","message":"sensitive-echo"}}\n401', 22); } catch (e) { assert.ok(!e.message.includes('sensitive-echo')); }
+  assert.deepEqual(decodeResponse('{"content":[]}\n200', 0), { content: [] });
+  assert.throws(() => decodeResponse('', 28), /curl 28/);
+});
+
+test('verified campaign rates reserve all input/output ceilings within one dollar', () => {
+  const state = { messages: 0, reservedUsd: 0 };
+  for (const c of buildCampaign().cases) reserve(state, LIMITS.inputTokens, c.assistant === 'assistant' ? { input: 1, output: 5 } : { input: 2, output: 10 });
+  assert.equal(state.messages, 5);
+  assert.ok(Math.abs(state.reservedUsd - 0.20304) < 1e-9);
+});
+
+test('report handles pending, interrupted, completed and unrun cases without losing the ledger', async () => {
+  const { markdownReport } = await import('./campaign-report.mjs');
+  const report = { paidAttempts: 0, requests: 0, reservedUsd: 0.20304, scenarios: [{ id: 'pending' }, { id: 'unrun' }], results: [{ id: 'pending', phase: 'count_tokens', passed: false }] };
+  assert.match(markdownReport(report), /count_tokens/);
+  assert.match(markdownReport(report), /not executed/);
+  report.results[0] = { id: 'pending', phase: 'completed', passed: true, inputTokens: 50, outputTokens: 10, estimatedCostUsd: 0.0002, durationMs: 500, issues: [] };
+  assert.match(markdownReport(report), /checks passed/);
+  assert.match(markdownReport(report), /50\/10/);
+});
+
+test('workspace header is optional, explicit and rejects header injection', async () => {
+  const { workspaceHeader, decodeResponse } = await import('./claude-transport.mjs');
+  assert.deepEqual(workspaceHeader(undefined), []);
+  assert.deepEqual(workspaceHeader('wrkspc_synthetic'), ['header = "anthropic-workspace-id: wrkspc_synthetic"']);
+  assert.throws(() => workspaceHeader('bad\r\nx-api-key: injected'), /Invalid/);
+  try { decodeResponse('{"error":{"type":"invalid_request_error","message":"echo synthetic-key"}}\n400', 22, false, 'synthetic-key'); }
+  catch(e) { assert.equal(e.safeDetail, 'echo [REDACTED]'); }
+});
