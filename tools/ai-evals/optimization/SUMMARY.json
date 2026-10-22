@@ -1,0 +1,880 @@
+{
+  "base": "59cffa6",
+  "benchmarkHash": "ead19c7caca8d6fb8de51667d4be852b2f6d57605c4231056584e29f405bb409",
+  "optimizationStopReason": "Two consecutive actual prompt modifications without retained gain >=3pp",
+  "limits": {
+    "usd": 5,
+    "input": 1500000,
+    "output": 80000,
+    "generations": 150,
+    "iterations": 8,
+    "inputPerCall": 20000,
+    "outputPerCall": 512
+  },
+  "usage": {
+    "usd": 1.3867170000000009,
+    "input": 648879,
+    "output": 20244,
+    "generations": 105
+  },
+  "remaining": {
+    "usd": 3.613282999999999,
+    "input": 851121,
+    "output": 59756,
+    "generations": 45
+  },
+  "best": {
+    "radar": "baseline",
+    "devis": "baseline",
+    "assistant": "baseline"
+  },
+  "iterations": [
+    {
+      "iteration": 1,
+      "phase": "iter-1",
+      "module": "radar",
+      "previousPhase": "baseline",
+      "hypothesis": "Non-applied patch; unchanged-prompt control retained for audit, not eligible as an optimization gain",
+      "oldPass": 6,
+      "newPass": 7,
+      "gainPp": 0,
+      "regressions": [],
+      "critical": [],
+      "accept": false,
+      "observedGainPp": 3.3333333333333335,
+      "noChange": true,
+      "decidedAt": "2026-10-22T16:34:15.217Z"
+    },
+    {
+      "iteration": 2,
+      "phase": "iter-2",
+      "module": "radar",
+      "previousPhase": "baseline",
+      "hypothesis": "Separate collection from choice display; record explicit address/budget before asking the next question",
+      "oldPass": 6,
+      "newPass": 7,
+      "gainPp": 0,
+      "regressions": [
+        "R-D08",
+        "R-D09"
+      ],
+      "critical": [],
+      "accept": false,
+      "observedGainPp": 3.3333333333333335,
+      "noChange": false,
+      "decidedAt": "2026-10-22T16:35:56.303Z"
+    },
+    {
+      "iteration": 3,
+      "phase": "iter-3",
+      "module": "assistant",
+      "previousPhase": "baseline",
+      "hypothesis": "Require first/last JSON object characters and forbid Markdown directly in the real Assistant buildPrompt",
+      "oldPass": 0,
+      "newPass": 0,
+      "gainPp": 0,
+      "regressions": [],
+      "critical": [],
+      "accept": false,
+      "observedGainPp": 0,
+      "noChange": false,
+      "decidedAt": "2026-10-22T16:36:47.127Z"
+    }
+  ],
+  "development": [
+    {
+      "module": "radar",
+      "before": {
+        "phase": "baseline",
+        "module": "radar",
+        "total": 10,
+        "passed": 6,
+        "compatible": 6,
+        "critical": 0,
+        "structuredConformity": 10,
+        "dimensions": {
+          "accuracy": 10,
+          "completeness": 8,
+          "tools": 10,
+          "format": 10,
+          "clarity": 6,
+          "safety": 10
+        },
+        "input": 102543,
+        "output": 3367,
+        "usd": 0.238756,
+        "latency": 36261,
+        "meanLatencyMs": 3626,
+        "failed": [
+          {
+            "id": "LIVE-RADAR-01",
+            "issues": [
+              {
+                "dimension": "clarity",
+                "reason": "question_duplicated_with_choice"
+              }
+            ],
+            "critical": []
+          },
+          {
+            "id": "LIVE-RADAR-02",
+            "issues": [
+              {
+                "dimension": "completeness",
+                "reason": "record_missing:intro"
+              },
+              {
+                "dimension": "clarity",
+                "reason": "question_duplicated_with_choice"
+              }
+            ],
+            "critical": []
+          },
+          {
+            "id": "R-D07",
+            "issues": [
+              {
+                "dimension": "clarity",
+                "reason": "question_duplicated_with_choice"
+              }
+            ],
+            "critical": []
+          },
+          {
+            "id": "R-D10",
+            "issues": [
+              {
+                "dimension": "completeness",
+                "reason": "record_missing:adresse"
+              },
+              {
+                "dimension": "clarity",
+                "reason": "question_duplicated_with_choice"
+              }
+            ],
+            "critical": []
+          }
+        ]
+      },
+      "after": {
+        "phase": "final-dev",
+        "module": "radar",
+        "total": 10,
+        "passed": 6,
+        "compatible": 6,
+        "critical": 0,
+        "structuredConformity": 8,
+        "dimensions": {
+          "accuracy": 10,
+          "completeness": 8,
+          "tools": 10,
+          "format": 8,
+          "clarity": 9,
+          "safety": 10
+        },
+        "input": 102543,
+        "output": 2929,
+        "usd": 0.23437599999999997,
+        "latency": 31698,
+        "meanLatencyMs": 3170,
+        "failed": [
+          {
+            "id": "LIVE-RADAR-01",
+            "issues": [
+              {
+                "dimension": "format",
+                "reason": "truncated"
+              }
+            ],
+            "critical": []
+          },
+          {
+            "id": "LIVE-RADAR-02",
+            "issues": [
+              {
+                "dimension": "completeness",
+                "reason": "record_missing:intro"
+              },
+              {
+                "dimension": "clarity",
+                "reason": "question_duplicated_with_choice"
+              }
+            ],
+            "critical": []
+          },
+          {
+            "id": "R-D04",
+            "issues": [
+              {
+                "dimension": "format",
+                "reason": "truncated"
+              },
+              {
+                "dimension": "format",
+                "reason": "schema:enregistrer_info:$.valeur:required"
+              }
+            ],
+            "critical": []
+          },
+          {
+            "id": "R-D10",
+            "issues": [
+              {
+                "dimension": "completeness",
+                "reason": "record_missing:adresse"
+              }
+            ],
+            "critical": []
+          }
+        ]
+      }
+    },
+    {
+      "module": "devis",
+      "before": {
+        "phase": "baseline",
+        "module": "devis",
+        "total": 10,
+        "passed": 10,
+        "compatible": 10,
+        "critical": 0,
+        "structuredConformity": 10,
+        "dimensions": {
+          "accuracy": 10,
+          "completeness": 10,
+          "tools": 10,
+          "format": 10,
+          "clarity": 10,
+          "safety": 10
+        },
+        "input": 39167,
+        "output": 1134,
+        "usd": 0.089674,
+        "latency": 17117,
+        "meanLatencyMs": 1712,
+        "failed": []
+      },
+      "after": {
+        "phase": "final-dev",
+        "module": "devis",
+        "total": 10,
+        "passed": 10,
+        "compatible": 10,
+        "critical": 0,
+        "structuredConformity": 10,
+        "dimensions": {
+          "accuracy": 10,
+          "completeness": 10,
+          "tools": 10,
+          "format": 10,
+          "clarity": 10,
+          "safety": 10
+        },
+        "input": 39167,
+        "output": 1058,
+        "usd": 0.08891399999999999,
+        "latency": 15603,
+        "meanLatencyMs": 1560,
+        "failed": []
+      }
+    },
+    {
+      "module": "assistant",
+      "before": {
+        "phase": "baseline",
+        "module": "assistant",
+        "total": 10,
+        "passed": 0,
+        "compatible": 10,
+        "critical": 0,
+        "structuredConformity": 0,
+        "dimensions": {
+          "accuracy": 10,
+          "completeness": 10,
+          "tools": 10,
+          "format": 0,
+          "clarity": 10,
+          "safety": 10
+        },
+        "input": 25810,
+        "output": 1251,
+        "usd": 0.032065,
+        "latency": 13801,
+        "meanLatencyMs": 1380,
+        "failed": [
+          {
+            "id": "LIVE-ASSISTANT-01",
+            "issues": [
+              {
+                "dimension": "format",
+                "reason": "not_strict_json"
+              }
+            ],
+            "critical": []
+          },
+          {
+            "id": "A-D02",
+            "issues": [
+              {
+                "dimension": "format",
+                "reason": "not_strict_json"
+              }
+            ],
+            "critical": []
+          },
+          {
+            "id": "A-D03",
+            "issues": [
+              {
+                "dimension": "format",
+                "reason": "not_strict_json"
+              }
+            ],
+            "critical": []
+          },
+          {
+            "id": "A-D04",
+            "issues": [
+              {
+                "dimension": "format",
+                "reason": "not_strict_json"
+              }
+            ],
+            "critical": []
+          },
+          {
+            "id": "A-D05",
+            "issues": [
+              {
+                "dimension": "format",
+                "reason": "not_strict_json"
+              }
+            ],
+            "critical": []
+          },
+          {
+            "id": "A-D06",
+            "issues": [
+              {
+                "dimension": "format",
+                "reason": "not_strict_json"
+              }
+            ],
+            "critical": []
+          },
+          {
+            "id": "A-D07",
+            "issues": [
+              {
+                "dimension": "format",
+                "reason": "not_strict_json"
+              }
+            ],
+            "critical": []
+          },
+          {
+            "id": "A-D08",
+            "issues": [
+              {
+                "dimension": "format",
+                "reason": "not_strict_json"
+              }
+            ],
+            "critical": []
+          },
+          {
+            "id": "A-D09",
+            "issues": [
+              {
+                "dimension": "format",
+                "reason": "not_strict_json"
+              }
+            ],
+            "critical": []
+          },
+          {
+            "id": "A-D10",
+            "issues": [
+              {
+                "dimension": "format",
+                "reason": "not_strict_json"
+              }
+            ],
+            "critical": []
+          }
+        ]
+      },
+      "after": {
+        "phase": "final-dev",
+        "module": "assistant",
+        "total": 10,
+        "passed": 0,
+        "compatible": 10,
+        "critical": 0,
+        "structuredConformity": 0,
+        "dimensions": {
+          "accuracy": 10,
+          "completeness": 10,
+          "tools": 10,
+          "format": 0,
+          "clarity": 10,
+          "safety": 10
+        },
+        "input": 25810,
+        "output": 1236,
+        "usd": 0.03199,
+        "latency": 12670,
+        "meanLatencyMs": 1267,
+        "failed": [
+          {
+            "id": "LIVE-ASSISTANT-01",
+            "issues": [
+              {
+                "dimension": "format",
+                "reason": "not_strict_json"
+              }
+            ],
+            "critical": []
+          },
+          {
+            "id": "A-D02",
+            "issues": [
+              {
+                "dimension": "format",
+                "reason": "not_strict_json"
+              }
+            ],
+            "critical": []
+          },
+          {
+            "id": "A-D03",
+            "issues": [
+              {
+                "dimension": "format",
+                "reason": "not_strict_json"
+              }
+            ],
+            "critical": []
+          },
+          {
+            "id": "A-D04",
+            "issues": [
+              {
+                "dimension": "format",
+                "reason": "not_strict_json"
+              }
+            ],
+            "critical": []
+          },
+          {
+            "id": "A-D05",
+            "issues": [
+              {
+                "dimension": "format",
+                "reason": "not_strict_json"
+              }
+            ],
+            "critical": []
+          },
+          {
+            "id": "A-D06",
+            "issues": [
+              {
+                "dimension": "format",
+                "reason": "not_strict_json"
+              }
+            ],
+            "critical": []
+          },
+          {
+            "id": "A-D07",
+            "issues": [
+              {
+                "dimension": "format",
+                "reason": "not_strict_json"
+              }
+            ],
+            "critical": []
+          },
+          {
+            "id": "A-D08",
+            "issues": [
+              {
+                "dimension": "format",
+                "reason": "not_strict_json"
+              }
+            ],
+            "critical": []
+          },
+          {
+            "id": "A-D09",
+            "issues": [
+              {
+                "dimension": "format",
+                "reason": "not_strict_json"
+              }
+            ],
+            "critical": []
+          },
+          {
+            "id": "A-D10",
+            "issues": [
+              {
+                "dimension": "format",
+                "reason": "not_strict_json"
+              }
+            ],
+            "critical": []
+          }
+        ]
+      }
+    }
+  ],
+  "validation": {
+    "overall": {
+      "phase": "final-validation",
+      "module": "all",
+      "total": 15,
+      "passed": 9,
+      "compatible": 14,
+      "critical": 0,
+      "structuredConformity": 10,
+      "dimensions": {
+        "accuracy": 15,
+        "completeness": 15,
+        "tools": 15,
+        "format": 10,
+        "clarity": 14,
+        "safety": 15
+      },
+      "input": 83633,
+      "output": 2732,
+      "usd": 0.177905,
+      "latency": 30685,
+      "meanLatencyMs": 2046,
+      "failed": [
+        {
+          "id": "R-V02",
+          "issues": [
+            {
+              "dimension": "clarity",
+              "reason": "question_duplicated_with_choice"
+            }
+          ],
+          "critical": []
+        },
+        {
+          "id": "A-V01",
+          "issues": [
+            {
+              "dimension": "format",
+              "reason": "not_strict_json"
+            }
+          ],
+          "critical": []
+        },
+        {
+          "id": "A-V02",
+          "issues": [
+            {
+              "dimension": "format",
+              "reason": "not_strict_json"
+            }
+          ],
+          "critical": []
+        },
+        {
+          "id": "A-V03",
+          "issues": [
+            {
+              "dimension": "format",
+              "reason": "not_strict_json"
+            }
+          ],
+          "critical": []
+        },
+        {
+          "id": "A-V04",
+          "issues": [
+            {
+              "dimension": "format",
+              "reason": "not_strict_json"
+            }
+          ],
+          "critical": []
+        },
+        {
+          "id": "A-V05",
+          "issues": [
+            {
+              "dimension": "format",
+              "reason": "not_strict_json"
+            }
+          ],
+          "critical": []
+        }
+      ]
+    },
+    "modules": [
+      {
+        "phase": "final-validation",
+        "module": "radar",
+        "total": 5,
+        "passed": 4,
+        "compatible": 4,
+        "critical": 0,
+        "structuredConformity": 5,
+        "dimensions": {
+          "accuracy": 5,
+          "completeness": 5,
+          "tools": 5,
+          "format": 5,
+          "clarity": 4,
+          "safety": 5
+        },
+        "input": 51277,
+        "output": 1579,
+        "usd": 0.11834399999999999,
+        "latency": 16735,
+        "meanLatencyMs": 3347,
+        "failed": [
+          {
+            "id": "R-V02",
+            "issues": [
+              {
+                "dimension": "clarity",
+                "reason": "question_duplicated_with_choice"
+              }
+            ],
+            "critical": []
+          }
+        ]
+      },
+      {
+        "phase": "final-validation",
+        "module": "devis",
+        "total": 5,
+        "passed": 5,
+        "compatible": 5,
+        "critical": 0,
+        "structuredConformity": 5,
+        "dimensions": {
+          "accuracy": 5,
+          "completeness": 5,
+          "tools": 5,
+          "format": 5,
+          "clarity": 5,
+          "safety": 5
+        },
+        "input": 19460,
+        "output": 396,
+        "usd": 0.04288,
+        "latency": 6207,
+        "meanLatencyMs": 1241,
+        "failed": []
+      },
+      {
+        "phase": "final-validation",
+        "module": "assistant",
+        "total": 5,
+        "passed": 0,
+        "compatible": 5,
+        "critical": 0,
+        "structuredConformity": 0,
+        "dimensions": {
+          "accuracy": 5,
+          "completeness": 5,
+          "tools": 5,
+          "format": 0,
+          "clarity": 5,
+          "safety": 5
+        },
+        "input": 12896,
+        "output": 757,
+        "usd": 0.016680999999999998,
+        "latency": 7743,
+        "meanLatencyMs": 1549,
+        "failed": [
+          {
+            "id": "A-V01",
+            "issues": [
+              {
+                "dimension": "format",
+                "reason": "not_strict_json"
+              }
+            ],
+            "critical": []
+          },
+          {
+            "id": "A-V02",
+            "issues": [
+              {
+                "dimension": "format",
+                "reason": "not_strict_json"
+              }
+            ],
+            "critical": []
+          },
+          {
+            "id": "A-V03",
+            "issues": [
+              {
+                "dimension": "format",
+                "reason": "not_strict_json"
+              }
+            ],
+            "critical": []
+          },
+          {
+            "id": "A-V04",
+            "issues": [
+              {
+                "dimension": "format",
+                "reason": "not_strict_json"
+              }
+            ],
+            "critical": []
+          },
+          {
+            "id": "A-V05",
+            "issues": [
+              {
+                "dimension": "format",
+                "reason": "not_strict_json"
+              }
+            ],
+            "critical": []
+          }
+        ]
+      }
+    ]
+  },
+  "versions": [
+    {
+      "phase": "baseline",
+      "module": "radar",
+      "sha256": "59f2eb18133d2b687396c4bc028922683ef61a282d40d1f92e851217b2ec5666",
+      "bytes": 12827,
+      "file": "tools/ai-evals/optimization/results/prompts/baseline/radar.js"
+    },
+    {
+      "phase": "baseline",
+      "module": "devis",
+      "sha256": "44c245dbd0752438b76eb1de092d6226198ced76206867bee47fe5fa955a00f1",
+      "bytes": 7073,
+      "file": "tools/ai-evals/optimization/results/prompts/baseline/devis.js"
+    },
+    {
+      "phase": "baseline",
+      "module": "assistant",
+      "sha256": "3e04f05a2a3d5e64eff8ad1a4c03e3c88efb952f0e3a482992e7dbfea68916ae",
+      "bytes": 40658,
+      "file": "tools/ai-evals/optimization/results/prompts/baseline/assistant.js"
+    },
+    {
+      "phase": "iter-1",
+      "module": "radar",
+      "sha256": "59f2eb18133d2b687396c4bc028922683ef61a282d40d1f92e851217b2ec5666",
+      "bytes": 12827,
+      "file": "tools/ai-evals/optimization/results/prompts/iter-1/radar.js"
+    },
+    {
+      "phase": "iter-1",
+      "module": "devis",
+      "sha256": "44c245dbd0752438b76eb1de092d6226198ced76206867bee47fe5fa955a00f1",
+      "bytes": 7073,
+      "file": "tools/ai-evals/optimization/results/prompts/iter-1/devis.js"
+    },
+    {
+      "phase": "iter-1",
+      "module": "assistant",
+      "sha256": "3e04f05a2a3d5e64eff8ad1a4c03e3c88efb952f0e3a482992e7dbfea68916ae",
+      "bytes": 40658,
+      "file": "tools/ai-evals/optimization/results/prompts/iter-1/assistant.js"
+    },
+    {
+      "phase": "iter-2",
+      "module": "radar",
+      "sha256": "2b96b614196f82f15a8eec7e9ab6ffe257bebd03a967a1639f014e5b819c847d",
+      "bytes": 12484,
+      "file": "tools/ai-evals/optimization/results/prompts/iter-2/radar.js"
+    },
+    {
+      "phase": "iter-2",
+      "module": "devis",
+      "sha256": "44c245dbd0752438b76eb1de092d6226198ced76206867bee47fe5fa955a00f1",
+      "bytes": 7073,
+      "file": "tools/ai-evals/optimization/results/prompts/iter-2/devis.js"
+    },
+    {
+      "phase": "iter-2",
+      "module": "assistant",
+      "sha256": "3e04f05a2a3d5e64eff8ad1a4c03e3c88efb952f0e3a482992e7dbfea68916ae",
+      "bytes": 40658,
+      "file": "tools/ai-evals/optimization/results/prompts/iter-2/assistant.js"
+    },
+    {
+      "phase": "iter-3",
+      "module": "radar",
+      "sha256": "59f2eb18133d2b687396c4bc028922683ef61a282d40d1f92e851217b2ec5666",
+      "bytes": 12827,
+      "file": "tools/ai-evals/optimization/results/prompts/iter-3/radar.js"
+    },
+    {
+      "phase": "iter-3",
+      "module": "devis",
+      "sha256": "44c245dbd0752438b76eb1de092d6226198ced76206867bee47fe5fa955a00f1",
+      "bytes": 7073,
+      "file": "tools/ai-evals/optimization/results/prompts/iter-3/devis.js"
+    },
+    {
+      "phase": "iter-3",
+      "module": "assistant",
+      "sha256": "0f738449802abec22fb8694dfb276557cd864d80ef549ce2ec74fe1dfd0ba5c6",
+      "bytes": 40923,
+      "file": "tools/ai-evals/optimization/results/prompts/iter-3/assistant.js"
+    },
+    {
+      "phase": "final-dev",
+      "module": "radar",
+      "sha256": "59f2eb18133d2b687396c4bc028922683ef61a282d40d1f92e851217b2ec5666",
+      "bytes": 12827,
+      "file": "tools/ai-evals/optimization/results/prompts/final-dev/radar.js"
+    },
+    {
+      "phase": "final-dev",
+      "module": "devis",
+      "sha256": "44c245dbd0752438b76eb1de092d6226198ced76206867bee47fe5fa955a00f1",
+      "bytes": 7073,
+      "file": "tools/ai-evals/optimization/results/prompts/final-dev/devis.js"
+    },
+    {
+      "phase": "final-dev",
+      "module": "assistant",
+      "sha256": "3e04f05a2a3d5e64eff8ad1a4c03e3c88efb952f0e3a482992e7dbfea68916ae",
+      "bytes": 40658,
+      "file": "tools/ai-evals/optimization/results/prompts/final-dev/assistant.js"
+    },
+    {
+      "phase": "final-validation",
+      "module": "radar",
+      "sha256": "59f2eb18133d2b687396c4bc028922683ef61a282d40d1f92e851217b2ec5666",
+      "bytes": 12827,
+      "file": "tools/ai-evals/optimization/results/prompts/final-validation/radar.js"
+    },
+    {
+      "phase": "final-validation",
+      "module": "devis",
+      "sha256": "44c245dbd0752438b76eb1de092d6226198ced76206867bee47fe5fa955a00f1",
+      "bytes": 7073,
+      "file": "tools/ai-evals/optimization/results/prompts/final-validation/devis.js"
+    },
+    {
+      "phase": "final-validation",
+      "module": "assistant",
+      "sha256": "3e04f05a2a3d5e64eff8ad1a4c03e3c88efb952f0e3a482992e7dbfea68916ae",
+      "bytes": 40658,
+      "file": "tools/ai-evals/optimization/results/prompts/final-validation/assistant.js"
+    }
+  ]
+}

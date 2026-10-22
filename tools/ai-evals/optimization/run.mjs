@@ -7,16 +7,19 @@ import {anthropicRequest} from '../claude-transport.mjs';
 import {requestFor,RATES} from './requests.mjs';
 import {score} from './score.mjs';
 import {CAPS,usage,authorize} from './budget.mjs';
+import {stopAfterStagnation} from './selection.mjs';
 const root='tools/ai-evals/optimization', dir=root+'/results';fs.mkdirSync(dir,{recursive:true});
 const hash=s=>createHash('sha256').update(s).digest('hex');
 const benchmark=fs.readFileSync(root+'/benchmark.json','utf8'), benchmarkHash=hash(benchmark);
 if(JSON.parse(fs.readFileSync(root+'/manifest.json','utf8')).benchmarkSha256!==benchmarkHash)throw new Error('Frozen manifest mismatch');
+const manifest=JSON.parse(fs.readFileSync(root+'/manifest.json','utf8'));
+for(const [file,key] of [['score.mjs','evaluatorSha256'],['requests.mjs','requestsSha256']])if(hash(fs.readFileSync(root+'/'+file,'utf8'))!==manifest[key])throw new Error('Frozen evaluator/request builder changed');
 const cases=JSON.parse(benchmark),statePath=dir+'/state.json';
 export const promptFiles={radar:'lib/radar-chat-prompt.js',devis:'lib/devis-chat-prompt.js',assistant:'app/api/koji-assistant/route.js'};
 function write(file,value) {
  const str=JSON.stringify(value,null,2)+'\n';
  for(const k of ['ANTHROPIC_API_KEY','ANTHROPIC_WORKSPACE_ID']) if(process.env[k]&&str.includes(process.env[k])) throw new Error('Secret reflection; write blocked');
- const tmp=file+'.tmp';const fd=fs.openSync(tmp,'w');try{fs.writeFileSync(fd,str);fs.fsyncSync(fd);}finally{fs.closeSync(fd);}fs.renameSync(tmp,file);
+ const tmp=file+'.tmp';const fd=fs.openSync(tmp,'w');try{fs.writeFileSync(fd,str);fs.fsyncSync(fd);}finally{fs.closeSync(fd);}fs.renameSync(tmp,file);const directory=fs.openSync(path.dirname(file),'r');try{fs.fsyncSync(directory);}finally{fs.closeSync(directory);}
 }
 let state=fs.existsSync(statePath)?JSON.parse(fs.readFileSync(statePath,'utf8')):{benchmarkHash,base:'59cffa6',limits:CAPS,attempts:[],runs:{},iterations:[],best:{radar:'baseline',devis:'baseline',assistant:'baseline'},finalRemaining:45,validationOpened:false,createdAt:new Date().toISOString(),pricing:{source:'https://platform.claude.com/docs/en/about-claude/pricing',rates:RATES,verifiedAt:'2026-10-22T16:02:38.065Z'}};
 const save=()=>write(statePath,state);
@@ -27,12 +30,16 @@ if(command!=='run'||!phase||!/^(baseline|iter-[1-8]|final-dev|final-validation)$
 const final=phase.startsWith('final-');
 if(final&&module)throw new Error('Final phases must include their entire split');
 if(!final&&(state.validationOpened||state.runs['final-dev'])) throw new Error('Validation already opened; optimization closed');
-if(phase.startsWith('iter-')&&state.iterations.filter(i=>i.gainPp<3).slice(-2).length>=2&&state.iterations.slice(-2).every(i=>i.gainPp<3)) throw new Error('STOP_TWO_NO_GAIN');
+if(phase.startsWith('iter-')&&stopAfterStagnation(state.iterations)) throw new Error('STOP_TWO_NO_GAIN');
 if(phase==='final-validation'&&!state.runs['final-dev']?.completed) throw new Error('Final dev must complete before validation');
 if(phase==='baseline'&&module) throw new Error('Baseline must include all 30 development cases');
 if(phase.startsWith('iter-')&&(!state.runs.baseline?.completed||!['radar','devis','assistant'].includes(module))) throw new Error('Baseline/module prerequisite');
 if(phase.startsWith('iter-')&&state.iterations.length>=8) throw new Error('STOP_ITERATIONS');
 if(phase.startsWith('iter-')&&Number(phase.slice(5))!==state.iterations.length+1) throw new Error('Iterations must be sequential and decided');
+if(phase.startsWith('iter-')) {
+ const previous=dir+'/prompts/'+state.best[module]+'/'+module+'.js';
+ if(fs.readFileSync(previous,'utf8')===fs.readFileSync(promptFiles[module],'utf8'))throw new Error('No prompt change; refuse accidental paid rerun');
+}
 const selected=cases.filter(c=>c.split===(phase==='final-validation'?'validation':'dev')&&(!module||c.assistant===module));
 const fingerprint=hash(Object.values(promptFiles).map(f=>fs.readFileSync(f,'utf8')).join('\n'));
 if(state.runs[phase]?.fingerprint&&state.runs[phase].fingerprint!==fingerprint) throw new Error('Cannot resume with changed prompts');

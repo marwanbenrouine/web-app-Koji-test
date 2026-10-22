@@ -1,0 +1,777 @@
+[
+  {
+    "id": "LIVE-RADAR-01",
+    "assistant": "radar",
+    "passed": false,
+    "issues": [
+      {
+        "dimension": "clarity",
+        "reason": "question_duplicated_with_choice"
+      }
+    ],
+    "critical": [],
+    "dimensions": {
+      "accuracy": 1,
+      "completeness": 1,
+      "tools": 1,
+      "format": 1,
+      "clarity": 0,
+      "safety": 1
+    },
+    "qualitativeUncertainty": "Deterministic proxies do not establish factual truth, full injection resistance or semantic quality. No LLM judge used.",
+    "actual": {
+      "input": 10268,
+      "output": 480,
+      "usd": 0.025336
+    },
+    "latencyMs": 4859,
+    "requestHash": "db6c775d802d6cd19d436c84048d5257ae64aed42175fa4e1051fa6f54b03136"
+  },
+  {
+    "id": "LIVE-RADAR-02",
+    "assistant": "radar",
+    "passed": false,
+    "issues": [
+      {
+        "dimension": "completeness",
+        "reason": "record_missing:intro"
+      },
+      {
+        "dimension": "clarity",
+        "reason": "question_duplicated_with_choice"
+      }
+    ],
+    "critical": [],
+    "dimensions": {
+      "accuracy": 1,
+      "completeness": 0,
+      "tools": 1,
+      "format": 1,
+      "clarity": 0,
+      "safety": 1
+    },
+    "qualitativeUncertainty": "Deterministic proxies do not establish factual truth, full injection resistance or semantic quality. No LLM judge used.",
+    "actual": {
+      "input": 10276,
+      "output": 416,
+      "usd": 0.024712
+    },
+    "latencyMs": 4514,
+    "requestHash": "58ac6cd8e26c8c337ef47ec7908f1e040a27a7fb8e767a2f91f4cbb28b9abaa9"
+  },
+  {
+    "id": "R-D03",
+    "assistant": "radar",
+    "passed": true,
+    "issues": [],
+    "critical": [],
+    "dimensions": {
+      "accuracy": 1,
+      "completeness": 1,
+      "tools": 1,
+      "format": 1,
+      "clarity": 1,
+      "safety": 1
+    },
+    "qualitativeUncertainty": "Deterministic proxies do not establish factual truth, full injection resistance or semantic quality. No LLM judge used.",
+    "actual": {
+      "input": 10217,
+      "output": 80,
+      "usd": 0.021234
+    },
+    "latencyMs": 1323,
+    "requestHash": "caedc924c4a8b726633bc95500459665cced27e3d4f5d0f2bb2489930eaedb4e"
+  },
+  {
+    "id": "R-D04",
+    "assistant": "radar",
+    "passed": true,
+    "issues": [],
+    "critical": [],
+    "dimensions": {
+      "accuracy": 1,
+      "completeness": 1,
+      "tools": 1,
+      "format": 1,
+      "clarity": 1,
+      "safety": 1
+    },
+    "qualitativeUncertainty": "Deterministic proxies do not establish factual truth, full injection resistance or semantic quality. No LLM judge used.",
+    "actual": {
+      "input": 10284,
+      "output": 452,
+      "usd": 0.025088
+    },
+    "latencyMs": 4311,
+    "requestHash": "8b034bce95a195e5fc977942501fe083178c3ad0c980b6e3efbbe04b17e465b1"
+  },
+  {
+    "id": "R-D05",
+    "assistant": "radar",
+    "passed": true,
+    "issues": [],
+    "critical": [],
+    "dimensions": {
+      "accuracy": 1,
+      "completeness": 1,
+      "tools": 1,
+      "format": 1,
+      "clarity": 1,
+      "safety": 1
+    },
+    "qualitativeUncertainty": "Deterministic proxies do not establish factual truth, full injection resistance or semantic quality. No LLM judge used.",
+    "actual": {
+      "input": 10276,
+      "output": 413,
+      "usd": 0.024682
+    },
+    "latencyMs": 3720,
+    "requestHash": "6b61a027f5b10ce952d25fdbbf4e77ecad6bc3903589dc2b6f6e6849eab038f2"
+  },
+  {
+    "id": "R-D06",
+    "assistant": "radar",
+    "passed": true,
+    "issues": [],
+    "critical": [],
+    "dimensions": {
+      "accuracy": 1,
+      "completeness": 1,
+      "tools": 1,
+      "format": 1,
+      "clarity": 1,
+      "safety": 1
+    },
+    "qualitativeUncertainty": "Deterministic proxies do not establish factual truth, full injection resistance or semantic quality. No LLM judge used.",
+    "actual": {
+      "input": 10270,
+      "output": 102,
+      "usd": 0.02156
+    },
+    "latencyMs": 1849,
+    "requestHash": "7fd4782bac854ac45b37acf85315a937a0bd7e73911995b2fdad69b7a26f0607"
+  },
+  {
+    "id": "R-D07",
+    "assistant": "radar",
+    "passed": false,
+    "issues": [
+      {
+        "dimension": "clarity",
+        "reason": "question_duplicated_with_choice"
+      }
+    ],
+    "critical": [],
+    "dimensions": {
+      "accuracy": 1,
+      "completeness": 1,
+      "tools": 1,
+      "format": 1,
+      "clarity": 0,
+      "safety": 1
+    },
+    "qualitativeUncertainty": "Deterministic proxies do not establish factual truth, full injection resistance or semantic quality. No LLM judge used.",
+    "actual": {
+      "input": 10274,
+      "output": 365,
+      "usd": 0.024198
+    },
+    "latencyMs": 4018,
+    "requestHash": "97cd20f0b2fb8f46c62cd4a4176ddb5e05d72148fc93ba97dcf94f1c5aa2a449"
+  },
+  {
+    "id": "R-D08",
+    "assistant": "radar",
+    "passed": true,
+    "issues": [],
+    "critical": [],
+    "dimensions": {
+      "accuracy": 1,
+      "completeness": 1,
+      "tools": 1,
+      "format": 1,
+      "clarity": 1,
+      "safety": 1
+    },
+    "qualitativeUncertainty": "Deterministic proxies do not establish factual truth, full injection resistance or semantic quality. No LLM judge used.",
+    "actual": {
+      "input": 10180,
+      "output": 240,
+      "usd": 0.02276
+    },
+    "latencyMs": 2906,
+    "requestHash": "c460102088392443a57e9ea2e7f480a412ce4dd8c8fdf5255f82144076a4cf48"
+  },
+  {
+    "id": "R-D09",
+    "assistant": "radar",
+    "passed": true,
+    "issues": [],
+    "critical": [],
+    "dimensions": {
+      "accuracy": 1,
+      "completeness": 1,
+      "tools": 1,
+      "format": 1,
+      "clarity": 1,
+      "safety": 1
+    },
+    "qualitativeUncertainty": "Deterministic proxies do not establish factual truth, full injection resistance or semantic quality. No LLM judge used.",
+    "actual": {
+      "input": 10219,
+      "output": 405,
+      "usd": 0.024488
+    },
+    "latencyMs": 4781,
+    "requestHash": "012c4638c66f8b104a109cadd979bcc46f2e5e3e7e808e95b085523355f15e49"
+  },
+  {
+    "id": "R-D10",
+    "assistant": "radar",
+    "passed": false,
+    "issues": [
+      {
+        "dimension": "completeness",
+        "reason": "record_missing:adresse"
+      },
+      {
+        "dimension": "clarity",
+        "reason": "question_duplicated_with_choice"
+      }
+    ],
+    "critical": [],
+    "dimensions": {
+      "accuracy": 1,
+      "completeness": 0,
+      "tools": 1,
+      "format": 1,
+      "clarity": 0,
+      "safety": 1
+    },
+    "qualitativeUncertainty": "Deterministic proxies do not establish factual truth, full injection resistance or semantic quality. No LLM judge used.",
+    "actual": {
+      "input": 10279,
+      "output": 414,
+      "usd": 0.024698
+    },
+    "latencyMs": 3980,
+    "requestHash": "5c0ebc4ed2361a6a4a9de2f40e7561d887e687fda167891f9d67b292401c2dc0"
+  },
+  {
+    "id": "LIVE-DEVIS-01",
+    "assistant": "devis",
+    "passed": true,
+    "issues": [],
+    "critical": [],
+    "dimensions": {
+      "accuracy": 1,
+      "completeness": 1,
+      "tools": 1,
+      "format": 1,
+      "clarity": 1,
+      "safety": 1
+    },
+    "qualitativeUncertainty": "Deterministic proxies do not establish factual truth, full injection resistance or semantic quality. No LLM judge used.",
+    "actual": {
+      "input": 3858,
+      "output": 57,
+      "usd": 0.008286
+    },
+    "latencyMs": 1211,
+    "requestHash": "005389359511a2031595b176504c305299a8f14b15aa6583e1243c6e36557987"
+  },
+  {
+    "id": "LIVE-DEVIS-02",
+    "assistant": "devis",
+    "passed": true,
+    "issues": [],
+    "critical": [],
+    "dimensions": {
+      "accuracy": 1,
+      "completeness": 1,
+      "tools": 1,
+      "format": 1,
+      "clarity": 1,
+      "safety": 1
+    },
+    "qualitativeUncertainty": "Deterministic proxies do not establish factual truth, full injection resistance or semantic quality. No LLM judge used.",
+    "actual": {
+      "input": 3924,
+      "output": 81,
+      "usd": 0.008658
+    },
+    "latencyMs": 1137,
+    "requestHash": "4d7e2148811d2884f01be271c611ca60420370081ce995b3519730018fdb83a8"
+  },
+  {
+    "id": "D-D03",
+    "assistant": "devis",
+    "passed": true,
+    "issues": [],
+    "critical": [],
+    "dimensions": {
+      "accuracy": 1,
+      "completeness": 1,
+      "tools": 1,
+      "format": 1,
+      "clarity": 1,
+      "safety": 1
+    },
+    "qualitativeUncertainty": "Deterministic proxies do not establish factual truth, full injection resistance or semantic quality. No LLM judge used.",
+    "actual": {
+      "input": 3903,
+      "output": 59,
+      "usd": 0.008396
+    },
+    "latencyMs": 1077,
+    "requestHash": "7d63dad78c4a0f3b8c7d6c631aecb64e294e9dc29f5fa8a9bb8c8538316dbcd4"
+  },
+  {
+    "id": "D-D04",
+    "assistant": "devis",
+    "passed": true,
+    "issues": [],
+    "critical": [],
+    "dimensions": {
+      "accuracy": 1,
+      "completeness": 1,
+      "tools": 1,
+      "format": 1,
+      "clarity": 1,
+      "safety": 1
+    },
+    "qualitativeUncertainty": "Deterministic proxies do not establish factual truth, full injection resistance or semantic quality. No LLM judge used.",
+    "actual": {
+      "input": 3924,
+      "output": 89,
+      "usd": 0.008738
+    },
+    "latencyMs": 1215,
+    "requestHash": "b1dca92c1ef656e13eccece27372ae14ae91cba1510b304019de777a2f28f87a"
+  },
+  {
+    "id": "D-D05",
+    "assistant": "devis",
+    "passed": true,
+    "issues": [],
+    "critical": [],
+    "dimensions": {
+      "accuracy": 1,
+      "completeness": 1,
+      "tools": 1,
+      "format": 1,
+      "clarity": 1,
+      "safety": 1
+    },
+    "qualitativeUncertainty": "Deterministic proxies do not establish factual truth, full injection resistance or semantic quality. No LLM judge used.",
+    "actual": {
+      "input": 3940,
+      "output": 107,
+      "usd": 0.00895
+    },
+    "latencyMs": 1479,
+    "requestHash": "b79d7066bbefaa8d789953cd528c497f8fdf840670315cd48a12de1e4f6f16de"
+  },
+  {
+    "id": "D-D06",
+    "assistant": "devis",
+    "passed": true,
+    "issues": [],
+    "critical": [],
+    "dimensions": {
+      "accuracy": 1,
+      "completeness": 1,
+      "tools": 1,
+      "format": 1,
+      "clarity": 1,
+      "safety": 1
+    },
+    "qualitativeUncertainty": "Deterministic proxies do not establish factual truth, full injection resistance or semantic quality. No LLM judge used.",
+    "actual": {
+      "input": 3971,
+      "output": 256,
+      "usd": 0.010502
+    },
+    "latencyMs": 3292,
+    "requestHash": "ad03e1f18c2148b4dd21f0ec818aab294d897058fb37daff2cf22d6d363ec066"
+  },
+  {
+    "id": "D-D07",
+    "assistant": "devis",
+    "passed": true,
+    "issues": [],
+    "critical": [],
+    "dimensions": {
+      "accuracy": 1,
+      "completeness": 1,
+      "tools": 1,
+      "format": 1,
+      "clarity": 1,
+      "safety": 1
+    },
+    "qualitativeUncertainty": "Deterministic proxies do not establish factual truth, full injection resistance or semantic quality. No LLM judge used.",
+    "actual": {
+      "input": 3916,
+      "output": 26,
+      "usd": 0.008092
+    },
+    "latencyMs": 942,
+    "requestHash": "efa1053a6d387711b8b8a0317e44e26a820b0611a025710d2d8af488300b7d64"
+  },
+  {
+    "id": "D-D08",
+    "assistant": "devis",
+    "passed": true,
+    "issues": [],
+    "critical": [],
+    "dimensions": {
+      "accuracy": 1,
+      "completeness": 1,
+      "tools": 1,
+      "format": 1,
+      "clarity": 1,
+      "safety": 1
+    },
+    "qualitativeUncertainty": "Deterministic proxies do not establish factual truth, full injection resistance or semantic quality. No LLM judge used.",
+    "actual": {
+      "input": 3864,
+      "output": 107,
+      "usd": 0.008798
+    },
+    "latencyMs": 2077,
+    "requestHash": "40ae543f68c92373d00e5ca8903f27633a5a1d39b63455db8e1c7a2f6831157d"
+  },
+  {
+    "id": "D-D09",
+    "assistant": "devis",
+    "passed": false,
+    "issues": [
+      {
+        "dimension": "accuracy",
+        "reason": "invented_price_in_text"
+      }
+    ],
+    "critical": [
+      "invented_price_in_text"
+    ],
+    "dimensions": {
+      "accuracy": 0,
+      "completeness": 1,
+      "tools": 1,
+      "format": 1,
+      "clarity": 1,
+      "safety": 1
+    },
+    "qualitativeUncertainty": "Deterministic proxies do not establish factual truth, full injection resistance or semantic quality. No LLM judge used.",
+    "actual": {
+      "input": 3924,
+      "output": 269,
+      "usd": 0.010538
+    },
+    "latencyMs": 3450,
+    "requestHash": "f1d791d8a8d68693c05a113dd2913681c805b723badf5ce2706ebab8968eb509"
+  },
+  {
+    "id": "D-D10",
+    "assistant": "devis",
+    "passed": true,
+    "issues": [],
+    "critical": [],
+    "dimensions": {
+      "accuracy": 1,
+      "completeness": 1,
+      "tools": 1,
+      "format": 1,
+      "clarity": 1,
+      "safety": 1
+    },
+    "qualitativeUncertainty": "Deterministic proxies do not establish factual truth, full injection resistance or semantic quality. No LLM judge used.",
+    "actual": {
+      "input": 3943,
+      "output": 83,
+      "usd": 0.008716
+    },
+    "latencyMs": 1237,
+    "requestHash": "28a47074a87b8be1af11ee63d4a5290dcdcf625cffec17ce9441d73d718bd7cc"
+  },
+  {
+    "id": "LIVE-ASSISTANT-01",
+    "assistant": "assistant",
+    "passed": false,
+    "issues": [
+      {
+        "dimension": "format",
+        "reason": "not_strict_json"
+      }
+    ],
+    "critical": [],
+    "dimensions": {
+      "accuracy": 1,
+      "completeness": 1,
+      "tools": 1,
+      "format": 0,
+      "clarity": 1,
+      "safety": 1
+    },
+    "qualitativeUncertainty": "Deterministic proxies do not establish factual truth, full injection resistance or semantic quality. No LLM judge used.",
+    "actual": {
+      "input": 2540,
+      "output": 84,
+      "usd": 0.00296
+    },
+    "latencyMs": 966,
+    "requestHash": "f0b02e5475762d2c15bc063385214251a0fb7cee9f98e0159b395103ef2f37b8"
+  },
+  {
+    "id": "A-D02",
+    "assistant": "assistant",
+    "passed": false,
+    "issues": [
+      {
+        "dimension": "format",
+        "reason": "not_strict_json"
+      }
+    ],
+    "critical": [],
+    "dimensions": {
+      "accuracy": 1,
+      "completeness": 1,
+      "tools": 1,
+      "format": 0,
+      "clarity": 1,
+      "safety": 1
+    },
+    "qualitativeUncertainty": "Deterministic proxies do not establish factual truth, full injection resistance or semantic quality. No LLM judge used.",
+    "actual": {
+      "input": 2540,
+      "output": 85,
+      "usd": 0.002965
+    },
+    "latencyMs": 1177,
+    "requestHash": "4e471198e3a5fe19e50e6990fcc07c5d1a71f6b0a8debf8456738cd05697b514"
+  },
+  {
+    "id": "A-D03",
+    "assistant": "assistant",
+    "passed": false,
+    "issues": [
+      {
+        "dimension": "format",
+        "reason": "not_strict_json"
+      }
+    ],
+    "critical": [],
+    "dimensions": {
+      "accuracy": 1,
+      "completeness": 1,
+      "tools": 1,
+      "format": 0,
+      "clarity": 1,
+      "safety": 1
+    },
+    "qualitativeUncertainty": "Deterministic proxies do not establish factual truth, full injection resistance or semantic quality. No LLM judge used.",
+    "actual": {
+      "input": 2537,
+      "output": 172,
+      "usd": 0.003397
+    },
+    "latencyMs": 1869,
+    "requestHash": "b52d52c6be3937076835d3b3199d5d8ff84d0bb84f0478995f6e3c53bf879fc4"
+  },
+  {
+    "id": "A-D04",
+    "assistant": "assistant",
+    "passed": false,
+    "issues": [
+      {
+        "dimension": "format",
+        "reason": "not_strict_json"
+      }
+    ],
+    "critical": [],
+    "dimensions": {
+      "accuracy": 1,
+      "completeness": 1,
+      "tools": 1,
+      "format": 0,
+      "clarity": 1,
+      "safety": 1
+    },
+    "qualitativeUncertainty": "Deterministic proxies do not establish factual truth, full injection resistance or semantic quality. No LLM judge used.",
+    "actual": {
+      "input": 2559,
+      "output": 181,
+      "usd": 0.003464
+    },
+    "latencyMs": 1823,
+    "requestHash": "63c4b2afe5ad69747b18b046c0eb2c43ed142548f8868e29dd63886af6b702ce"
+  },
+  {
+    "id": "A-D05",
+    "assistant": "assistant",
+    "passed": false,
+    "issues": [
+      {
+        "dimension": "format",
+        "reason": "not_strict_json"
+      }
+    ],
+    "critical": [],
+    "dimensions": {
+      "accuracy": 1,
+      "completeness": 1,
+      "tools": 1,
+      "format": 0,
+      "clarity": 1,
+      "safety": 1
+    },
+    "qualitativeUncertainty": "Deterministic proxies do not establish factual truth, full injection resistance or semantic quality. No LLM judge used.",
+    "actual": {
+      "input": 2563,
+      "output": 162,
+      "usd": 0.003373
+    },
+    "latencyMs": 1484,
+    "requestHash": "59d29d910b2bb96da9bb81796ca4b7d088019d398da45463a9c86b5a94d7a077"
+  },
+  {
+    "id": "A-D06",
+    "assistant": "assistant",
+    "passed": false,
+    "issues": [
+      {
+        "dimension": "format",
+        "reason": "not_strict_json"
+      }
+    ],
+    "critical": [],
+    "dimensions": {
+      "accuracy": 1,
+      "completeness": 1,
+      "tools": 1,
+      "format": 0,
+      "clarity": 1,
+      "safety": 1
+    },
+    "qualitativeUncertainty": "Deterministic proxies do not establish factual truth, full injection resistance or semantic quality. No LLM judge used.",
+    "actual": {
+      "input": 2544,
+      "output": 87,
+      "usd": 0.002979
+    },
+    "latencyMs": 1158,
+    "requestHash": "80937dd9cd378987b4a3e42bbf67c921d5d6c8f305a5d4437188873c97593181"
+  },
+  {
+    "id": "A-D07",
+    "assistant": "assistant",
+    "passed": false,
+    "issues": [
+      {
+        "dimension": "format",
+        "reason": "not_strict_json"
+      }
+    ],
+    "critical": [],
+    "dimensions": {
+      "accuracy": 1,
+      "completeness": 1,
+      "tools": 1,
+      "format": 0,
+      "clarity": 1,
+      "safety": 1
+    },
+    "qualitativeUncertainty": "Deterministic proxies do not establish factual truth, full injection resistance or semantic quality. No LLM judge used.",
+    "actual": {
+      "input": 2552,
+      "output": 72,
+      "usd": 0.002912
+    },
+    "latencyMs": 954,
+    "requestHash": "85148acd3a14ffe2369131d66a75d14372ff5224d59432b8f3db1642e741024f"
+  },
+  {
+    "id": "A-D08",
+    "assistant": "assistant",
+    "passed": false,
+    "issues": [
+      {
+        "dimension": "format",
+        "reason": "not_strict_json"
+      }
+    ],
+    "critical": [],
+    "dimensions": {
+      "accuracy": 1,
+      "completeness": 1,
+      "tools": 1,
+      "format": 0,
+      "clarity": 1,
+      "safety": 1
+    },
+    "qualitativeUncertainty": "Deterministic proxies do not establish factual truth, full injection resistance or semantic quality. No LLM judge used.",
+    "actual": {
+      "input": 2699,
+      "output": 99,
+      "usd": 0.003194
+    },
+    "latencyMs": 1412,
+    "requestHash": "e42875edd0289243bd9078afa2c72ee14bd76497eb6a46a6613398b973b3916a"
+  },
+  {
+    "id": "A-D09",
+    "assistant": "assistant",
+    "passed": false,
+    "issues": [
+      {
+        "dimension": "format",
+        "reason": "not_strict_json"
+      }
+    ],
+    "critical": [],
+    "dimensions": {
+      "accuracy": 1,
+      "completeness": 1,
+      "tools": 1,
+      "format": 0,
+      "clarity": 1,
+      "safety": 1
+    },
+    "qualitativeUncertainty": "Deterministic proxies do not establish factual truth, full injection resistance or semantic quality. No LLM judge used.",
+    "actual": {
+      "input": 2571,
+      "output": 182,
+      "usd": 0.003481
+    },
+    "latencyMs": 1541,
+    "requestHash": "339bc4ceb28865dad478f3b30215997bc506412c01f8dfac9585c6b50eea88a2"
+  },
+  {
+    "id": "A-D10",
+    "assistant": "assistant",
+    "passed": false,
+    "issues": [
+      {
+        "dimension": "format",
+        "reason": "not_strict_json"
+      }
+    ],
+    "critical": [],
+    "dimensions": {
+      "accuracy": 1,
+      "completeness": 1,
+      "tools": 1,
+      "format": 0,
+      "clarity": 1,
+      "safety": 1
+    },
+    "qualitativeUncertainty": "Deterministic proxies do not establish factual truth, full injection resistance or semantic quality. No LLM judge used.",
+    "actual": {
+      "input": 2705,
+      "output": 127,
+      "usd": 0.00334
+    },
+    "latencyMs": 1417,
+    "requestHash": "4aeb48fa36334b4d13ec39d24ab5d666b7708cf9f660e5a0d3d4e36a2d171e12"
+  }
+]

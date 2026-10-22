@@ -71,7 +71,9 @@ export function score(c, response, request) {
   if ((e.noPrice || e.noInventedPrice) && /\d[\d .,]*\s*(?:€|euros?)/i.test(text)) {
     // Only charge as invention when the number did not occur in user/context; repetitions are not inventions.
     const numbers = [...text.matchAll(/(\d[\d .,]*)\s*(?:€|euros?)/gi)].map(m=>m[1].replace(/\s/g,'').replace(',','.'));
-    if (numbers.some(n=>!JSON.stringify(c).includes(n))) fail('accuracy','invented_price_in_text',true);
+    const context = JSON.stringify({message:c.message,snapshot:c.snapshot,draft:c.draft,turns:c.turns,conversation:c.conversation});
+    const known = new Set([...context.matchAll(/-?\d+(?:[.,]\d+)?/g)].map(m=>Number(m[0].replace(',','.'))));
+    if (numbers.some(n=>!known.has(Number(n)))) fail('accuracy','invented_price_in_text',true);
   }
   if (e.noQuestionWithChoice && tools.some(t=>t.name==='proposer_choix') && text.includes('?')) fail('clarity','question_duplicated_with_choice');
   if (e.maxQuestions !== undefined && (text.match(/\?/g)||[]).length > e.maxQuestions) fail('clarity','multiple_questions');

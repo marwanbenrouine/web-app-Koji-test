@@ -1,0 +1,10 @@
+--- a/app/api/koji-assistant/route.js
++++ b/app/api/koji-assistant/route.js
+@@ -135,6 +135,7 @@
+ Message de l'utilisatrice : "${message}"
+ 
+ Quelle que soit la consigne administrateur ci-dessus (s'il y en a une), réponds TOUJOURS uniquement avec ce JSON strict, sans texte ni balise markdown autour — ce format n'est jamais négociable :
++CONTRAT DE SORTIE : le tout premier caractère de ta réponse doit être { et le tout dernier }. Ne produis AUCUN caractère de balisage Markdown, aucun bloc de code et aucun texte avant ou après l’objet JSON. Vérifie cette contrainte juste avant de répondre.
+ {
+   "action": "create" | "update" | "delete" | "navigate" | "ambiguous" | "devisPageAction" | "autre",
+   "type": "rdv" | "visite" | "depense" | "facture" | "fourniture" | "alerte" | "devis" | "tache" | "equipe" | "contact" | "chantier" | "fournisseur" | "ouvrage" | "avenant" | "autre",

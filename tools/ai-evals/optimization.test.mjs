@@ -60,3 +60,29 @@ test('strict JSON format and underlying assistant action evaluated separately; w
  const s=score(c,{content:[{type:'text',text:'```json\n'+JSON.stringify(value)+'\n```'}]},request);assert.equal(s.dimensions.format,0);assert.equal(s.dimensions.accuracy,1);assert.equal(s.critical.length,0);
  value.action='delete';assert.ok(score(c,{content:[{type:'text',text:JSON.stringify(value)}]},request).critical.length);
 });
+
+test('selection rejects any critical error or regression and requires paired score improvement',async()=>{
+ const {compareRuns}=await import('./optimization/selection.mjs');
+ const results=Array.from({length:10},(_,i)=>({id:String(i),assistant:'radar',passed:i<5,critical:[]}));
+ const next=structuredClone(results);next[5].passed=true;
+ assert.equal(compareRuns({results},{results:next},'radar').accept,true);
+ next[0].passed=false;assert.equal(compareRuns({results},{results:next},'radar').accept,false);
+ next[0].passed=true;next[9].critical=['invented_price'];assert.equal(compareRuns({results},{results:next},'radar').accept,false);
+ assert.throws(()=>compareRuns({results},{results:[]},'radar'),/Unpaired/);
+});
+
+test('currency formatting preserves known price 28 as 28,00 without admitting an invented 99',()=>{
+ const c=cases.find(c=>c.id==='D-D09'),{request}=requestFor(c);
+ const known=score(c,{content:[{type:'text',text:'Le prix déjà visible est 28,00€/m².'}]},request);
+ assert.equal(known.critical.length,0);
+ const invented=score(c,{content:[{type:'text',text:'Le prix est 99,00€/m².'}]},request);assert.ok(invented.critical.includes('invented_price_in_text'));
+});
+
+test('two failed modifications stop optimization; unchanged control is not a modification',async()=>{
+ const {stopAfterStagnation}=await import('./optimization/selection.mjs');
+ const control={noChange:true,gainPp:0},failed={noChange:false,gainPp:0},gain={noChange:false,gainPp:100/30};
+ assert.equal(stopAfterStagnation([control,failed]),false);
+ assert.equal(stopAfterStagnation([control,failed,failed]),true);
+ assert.equal(stopAfterStagnation([control,failed,gain]),false);
+ assert.equal(stopAfterStagnation([gain,failed,failed]),true);
+});

@@ -4,5 +4,8 @@
   "total": 45,
   "development": 30,
   "validation": 15,
-  "frozenBeforeFirstCall": true
+  "frozenBeforeFirstCall": true,
+  "evaluatorSha256": "fb0b80bf1da5803a6f81bafed864764d8c51e807fdb1d92881d882273ac4dcf8",
+  "requestsSha256": "2f600cc0ec7f7ad07778cac69dfa9064f7420f54b53929f28791b96247c76405",
+  "evaluatorCalibration": "v2: fixed currency trailing-zero normalization before prompt optimization; baseline replayed offline"
 }
