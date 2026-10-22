@@ -14,3 +14,7 @@ data/particulier-users.json
 
 .vercel
 .env*
+
+# Synthetic AI campaign outputs and persistent paid-run lock
+/tmp/koji-ai-live/
+/tools/ai-evals/pricing.json
