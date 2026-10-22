@@ -1,7 +1,14 @@
 import fs from 'node:fs';
 const dir='tools/ai-evals/revision/results',file=dir+'/state.json',s=JSON.parse(fs.readFileSync(file,'utf8'));
 if(fs.existsSync(dir+'/running.lock')||s.selectionClosed)throw new Error('Run active or selection closed');
-const [phase,hypothesis]=process.argv.slice(2),r=s.runs[phase];if(!r?.completed||!phase.startsWith('candidate')||s.decisions.some(d=>d.phase===phase))throw new Error('Undecidable candidate');
+const [phase,hypothesis]=process.argv.slice(2);
+if(phase==='close'){
+ if(!s.runs.baseline?.completed||s.decisions.length===0)throw new Error('No decided development variant');
+ const selected=fs.readFileSync(dir+'/prompts/'+s.bestPhase+'/radar.js','utf8');if(fs.readFileSync('lib/radar-chat-prompt.js','utf8')!==selected)throw new Error('Selected prompt not restored');
+ s.selectionClosed=true;s.closureReason='Two candidate variants evaluated; retain all 18 reserved independent validation generations and cumulative generation cap';
+ const fd=fs.openSync(file+'.tmp','w');fs.writeFileSync(fd,JSON.stringify(s,null,2)+'\n');fs.fsyncSync(fd);fs.closeSync(fd);fs.renameSync(file+'.tmp',file);console.log('Selection closed:',s.bestPhase);process.exit(0);
+}
+const r=s.runs[phase];if(!r?.completed||!phase.startsWith('candidate')||s.decisions.some(d=>d.phase===phase))throw new Error('Undecidable candidate');
 const old=JSON.parse(fs.readFileSync('tools/ai-evals/optimization/results/state.json','utf8'));
 const references=s.bestPhase==='baseline'?[...s.runs.baseline.results.filter(r=>r.assistant==='radar'),...old.runs.baseline.results.filter(r=>r.assistant==='radar'&&r.passed)]:s.runs[s.bestPhase].results;
 if(references.length!==r.results.length||references.some(b=>!r.results.some(n=>n.id===b.id)))throw new Error('Unpaired comparison');

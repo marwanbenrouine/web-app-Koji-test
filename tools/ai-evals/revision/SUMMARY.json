@@ -1,0 +1,408 @@
+{
+  "base": "94c6dd4",
+  "limits": {
+    "usd": 3.61,
+    "input": 851121,
+    "output": 59756,
+    "generations": 45,
+    "inputPerCall": 20000,
+    "outputPerCall": 512,
+    "iterations": 2
+  },
+  "usage": {
+    "usd": 0.7529659999999999,
+    "input": 344762,
+    "output": 9297,
+    "generations": 45
+  },
+  "cumulative": {
+    "usd": 2.1396830000000007,
+    "input": 993641,
+    "output": 29541,
+    "generations": 150
+  },
+  "remainingUsd": 2.857034,
+  "decisions": [
+    {
+      "phase": "candidate-1",
+      "hypothesis": "Operational contract after project state: collect known facts and spontaneous address; a choice tool must be the only carrier of its question",
+      "previous": "baseline",
+      "before": 7,
+      "after": 8,
+      "total": 9,
+      "newBefore": 1,
+      "newAfter": 2,
+      "regressions": [],
+      "critical": [],
+      "accept": true,
+      "retainedGain": 0.1111111111111111
+    },
+    {
+      "phase": "candidate-2",
+      "hypothesis": "When refusing an injected price request, still record the legitimate project facts; never store the injected instruction as project data",
+      "previous": "candidate-1",
+      "before": 8,
+      "after": 9,
+      "total": 9,
+      "newBefore": 2,
+      "newAfter": 3,
+      "regressions": [],
+      "critical": [],
+      "accept": true,
+      "retainedGain": 0.1111111111111111
+    }
+  ],
+  "validationGate": {
+    "rule": "No detected critical failure, no Radar validation score decrease, no lost Devis validation success",
+    "passed": true
+  },
+  "deliveredPhase": "candidate-2",
+  "development": {
+    "baseline": {
+      "passed": 6,
+      "total": 9,
+      "critical": 0,
+      "rawJson": 0,
+      "latencyMs": 2297,
+      "input": 50138,
+      "output": 1737,
+      "usd": 0.10746900000000002,
+      "failures": [
+        {
+          "id": "REV-R-D1",
+          "issues": [
+            {
+              "dimension": "clarity",
+              "reason": "question_duplicated_with_choice"
+            }
+          ]
+        },
+        {
+          "id": "REV-R-D3",
+          "issues": [
+            {
+              "dimension": "completeness",
+              "reason": "record_missing:intro"
+            }
+          ]
+        },
+        {
+          "id": "REV-A-D3",
+          "issues": [
+            {
+              "dimension": "clarity",
+              "reason": "json_mismatch:needsClarification"
+            }
+          ]
+        }
+      ]
+    },
+    "radarBefore": {
+      "passed": 1,
+      "total": 3,
+      "critical": 0,
+      "rawJson": 0,
+      "latencyMs": 4078,
+      "input": 30822,
+      "output": 1041,
+      "usd": 0.072054,
+      "failures": [
+        {
+          "id": "REV-R-D1",
+          "issues": [
+            {
+              "dimension": "clarity",
+              "reason": "question_duplicated_with_choice"
+            }
+          ]
+        },
+        {
+          "id": "REV-R-D3",
+          "issues": [
+            {
+              "dimension": "completeness",
+              "reason": "record_missing:intro"
+            }
+          ]
+        }
+      ]
+    },
+    "radarAfter": {
+      "passed": 9,
+      "total": 9,
+      "critical": 0,
+      "rawJson": 0,
+      "latencyMs": 2894,
+      "input": 96831,
+      "output": 2294,
+      "usd": 0.21660200000000002,
+      "failures": []
+    },
+    "note": "Radar candidate total includes six historical regressions; use REV-only counts for fresh paired comparison."
+  },
+  "validation": [
+    {
+      "module": "radar",
+      "before": {
+        "passed": 0,
+        "total": 3,
+        "critical": 0,
+        "rawJson": 0,
+        "latencyMs": 3920,
+        "input": 30817,
+        "output": 1139,
+        "usd": 0.07302399999999999,
+        "failures": [
+          {
+            "id": "REV-R-V1",
+            "issues": [
+              {
+                "dimension": "format",
+                "reason": "truncated"
+              },
+              {
+                "dimension": "format",
+                "reason": "schema:proposer_choix:$.options:required"
+              },
+              {
+                "dimension": "format",
+                "reason": "schema:proposer_choix:$.multiple:required"
+              },
+              {
+                "dimension": "clarity",
+                "reason": "question_duplicated_with_choice"
+              }
+            ]
+          },
+          {
+            "id": "REV-R-V2",
+            "issues": [
+              {
+                "dimension": "completeness",
+                "reason": "record_missing:adresse"
+              }
+            ]
+          },
+          {
+            "id": "REV-R-V3",
+            "issues": [
+              {
+                "dimension": "completeness",
+                "reason": "record_missing:intro"
+              },
+              {
+                "dimension": "clarity",
+                "reason": "question_duplicated_with_choice"
+              }
+            ]
+          }
+        ]
+      },
+      "after": {
+        "passed": 3,
+        "total": 3,
+        "critical": 0,
+        "rawJson": 0,
+        "latencyMs": 2770,
+        "input": 32338,
+        "output": 814,
+        "usd": 0.072816,
+        "failures": []
+      }
+    },
+    {
+      "module": "devis",
+      "before": {
+        "passed": 3,
+        "total": 3,
+        "critical": 0,
+        "rawJson": 0,
+        "latencyMs": 1169,
+        "input": 11664,
+        "output": 194,
+        "usd": 0.025268,
+        "failures": []
+      },
+      "after": {
+        "passed": 3,
+        "total": 3,
+        "critical": 0,
+        "rawJson": 0,
+        "latencyMs": 1216,
+        "input": 11664,
+        "output": 194,
+        "usd": 0.025268,
+        "failures": []
+      }
+    },
+    {
+      "module": "assistant",
+      "before": {
+        "passed": 3,
+        "total": 3,
+        "critical": 0,
+        "rawJson": 0,
+        "latencyMs": 1383,
+        "input": 7793,
+        "output": 378,
+        "usd": 0.009682999999999999,
+        "failures": []
+      },
+      "after": {
+        "passed": 3,
+        "total": 3,
+        "critical": 0,
+        "rawJson": 0,
+        "latencyMs": 1307,
+        "input": 7793,
+        "output": 375,
+        "usd": 0.009668,
+        "failures": []
+      }
+    }
+  ],
+  "phases": [
+    {
+      "phase": "baseline",
+      "passed": 6,
+      "total": 9,
+      "critical": 0,
+      "rawJson": 0,
+      "latencyMs": 2297,
+      "input": 50138,
+      "output": 1737,
+      "usd": 0.10746900000000002,
+      "failures": [
+        {
+          "id": "REV-R-D1",
+          "issues": [
+            {
+              "dimension": "clarity",
+              "reason": "question_duplicated_with_choice"
+            }
+          ]
+        },
+        {
+          "id": "REV-R-D3",
+          "issues": [
+            {
+              "dimension": "completeness",
+              "reason": "record_missing:intro"
+            }
+          ]
+        },
+        {
+          "id": "REV-A-D3",
+          "issues": [
+            {
+              "dimension": "clarity",
+              "reason": "json_mismatch:needsClarification"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "phase": "candidate-1",
+      "passed": 8,
+      "total": 9,
+      "critical": 0,
+      "rawJson": 0,
+      "latencyMs": 2734,
+      "input": 95724,
+      "output": 2172,
+      "usd": 0.213168,
+      "failures": [
+        {
+          "id": "REV-R-D3",
+          "issues": [
+            {
+              "dimension": "completeness",
+              "reason": "record_missing:intro"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "phase": "candidate-2",
+      "passed": 9,
+      "total": 9,
+      "critical": 0,
+      "rawJson": 0,
+      "latencyMs": 2894,
+      "input": 96831,
+      "output": 2294,
+      "usd": 0.21660200000000002,
+      "failures": []
+    },
+    {
+      "phase": "validation-before",
+      "passed": 6,
+      "total": 9,
+      "critical": 0,
+      "rawJson": 0,
+      "latencyMs": 2157,
+      "input": 50274,
+      "output": 1711,
+      "usd": 0.107975,
+      "failures": [
+        {
+          "id": "REV-R-V1",
+          "issues": [
+            {
+              "dimension": "format",
+              "reason": "truncated"
+            },
+            {
+              "dimension": "format",
+              "reason": "schema:proposer_choix:$.options:required"
+            },
+            {
+              "dimension": "format",
+              "reason": "schema:proposer_choix:$.multiple:required"
+            },
+            {
+              "dimension": "clarity",
+              "reason": "question_duplicated_with_choice"
+            }
+          ]
+        },
+        {
+          "id": "REV-R-V2",
+          "issues": [
+            {
+              "dimension": "completeness",
+              "reason": "record_missing:adresse"
+            }
+          ]
+        },
+        {
+          "id": "REV-R-V3",
+          "issues": [
+            {
+              "dimension": "completeness",
+              "reason": "record_missing:intro"
+            },
+            {
+              "dimension": "clarity",
+              "reason": "question_duplicated_with_choice"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "phase": "validation-after",
+      "passed": 9,
+      "total": 9,
+      "critical": 0,
+      "rawJson": 0,
+      "latencyMs": 1764,
+      "input": 51795,
+      "output": 1383,
+      "usd": 0.10775200000000001,
+      "failures": []
+    }
+  ]
+}
