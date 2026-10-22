@@ -55,3 +55,7 @@ Avant chaque génération, un comptage valide doit rester sous 19 744 tokens (ma
 Ajouter **ANTHROPIC_WORKSPACE_ID** dans les variables de cet environnement, avec le workspace Anthropic auquel appliquer cette clé. Ce n'est pas la clé API. L'exigence a été ajoutée au brouillon de configuration ; l'enregistrement du brouillon ne modifie pas à lui seul le processus courant.
 
 Le transport sait désormais envoyer `anthropic-workspace-id` et rejette toute injection d'en-tête. Le verrou de la campagne interrompue reste conservé. Avant toute reprise explicite, examiner le journal et le bilan global ; aucune génération ne doit être doublée et les plafonds doivent continuer d'inclure toute génération éventuellement ambiguë. À ce stade, le compteur de génération global est nul.
+
+## Reprise après ajout du workspace
+
+La campagne réelle a ensuite exécuté les cinq générations autorisées. Voir [le bilan de référence complet](BASELINE-01-RESULTS.md) et `baselines/claude-01.json`. Le présent fichier conserve l'historique du blocage initial.

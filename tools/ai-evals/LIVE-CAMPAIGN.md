@@ -79,3 +79,7 @@ Ces propositions viennent de l'examen statique, pas de résultats Claude invent�
 ## Bilan de la première tentative autorisée
 
 Voir `BASELINE-01.md` : blocage HTTP 400 avant génération, car la clé nécessite un workspace. Le transport accepte désormais `ANTHROPIC_WORKSPACE_ID`, les diagnostics sont expurgés et le budget est réservé sur les plafonds complets d’entrée et de sortie. 22 tests hors ligne passent ; aucun prompt modifié.
+
+## Première campagne réelle terminée
+
+Voir [BASELINE-01-RESULTS.md](BASELINE-01-RESULTS.md) : cinq générations, 0,070542 USD estimés, quatre assertions automatiques réussies sur cinq, écarts de prompt Radar et JSON Markdown de l'Assistant détaillés. Aucun prompt modifié et aucune exécution d'outil. Le verrou est maintenu après les cinq appels.
