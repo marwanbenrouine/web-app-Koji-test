@@ -18,3 +18,7 @@ data/particulier-users.json
 # Synthetic AI campaign outputs and persistent paid-run lock
 /tmp/koji-ai-live/
 /tools/ai-evals/pricing.json
+
+# Optimization process lock (ledger/results are reviewable)
+/tools/ai-evals/optimization/results/running.lock
+/tools/ai-evals/optimization/results/*.tmp

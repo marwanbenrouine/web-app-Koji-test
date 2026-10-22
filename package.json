@@ -10,7 +10,8 @@
     "test:ai-evals": "node --test tools/ai-evals/*.test.mjs",
     "eval:ai": "node tools/ai-evals/run.mjs",
     "test:ai-smoke": "node --test tools/ai-evals/smoke.test.mjs",
-    "eval:ai:campaign": "node tools/ai-evals/live-campaign.mjs"
+    "eval:ai:campaign": "node tools/ai-evals/live-campaign.mjs",
+    "eval:ai:optimize": "node tools/ai-evals/optimization/run.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.123.0",

@@ -1,0 +1,8 @@
+{
+  "base": "59cffa6",
+  "benchmarkSha256": "ead19c7caca8d6fb8de51667d4be852b2f6d57605c4231056584e29f405bb409",
+  "total": 45,
+  "development": 30,
+  "validation": 15,
+  "frozenBeforeFirstCall": true
+}
