@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test:ai-evals": "node --test tools/ai-evals/*.test.mjs",
+    "eval:ai": "node tools/ai-evals/run.mjs",
+    "test:ai-smoke": "node --test tools/ai-evals/smoke.test.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.123.0",
